@@ -7,7 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="vistas\AlbumCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\ArtistaCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\CancionCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\CategoriaCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\GeneroCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\PlaylistCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="vistas\AlbumCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\ArtistaCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\CancionCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\CategoriaCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\GeneroCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\Inicio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\PlaylistCRUD.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
