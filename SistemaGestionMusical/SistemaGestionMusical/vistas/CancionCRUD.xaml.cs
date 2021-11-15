@@ -21,5 +21,10 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
         }
+
+        private void btnAñadir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="PlaylistCRUD" Height="450" Width="800">
+        Title="Todas las playlist" Height="343" Width="589">
     <Grid>
-        
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,56"/>
+        <Button Content="Crear nueva playlist" HorizontalAlignment="Left" Margin="167,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="347,286,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+        <Button Content="Ver playlist" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="523,295,0,0" VerticalAlignment="Top" Width="56"/>
+
     </Grid>
 </Window>

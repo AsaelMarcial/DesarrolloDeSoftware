@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\App.xaml
-7-11922235
+11189095853
 
-11-224887163
+16805386054
 192-1533232326
-vistas\AlbumCRUD.xaml;vistas\ArtistaCRUD.xaml;vistas\CancionCRUD.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCRUD.xaml;
+vistas\AlbumCRUD.xaml;vistas\ArtistaCRUD.xaml;vistas\CancionCRUD.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;
 
-True
+False
 

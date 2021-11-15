@@ -1,0 +1,23 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.PlaylistCrear"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="Formulario de playlist" Height="323" Width="285">
+    <Grid>
+        <TextBox HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Background="#FFECECEC"/>
+        <Label Content="Crear nueva playlist" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="34,44,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="213" Background="#FFECECEC"/>
+        <Label Content="Descripción" HorizontalAlignment="Left" Margin="34,93,0,0" VerticalAlignment="Top"/>
+        <Button Content="Crear" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Height="29" Width="104" Background="#FFC5F3CA">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="200,261,0,0" VerticalAlignment="Top" Background="#FFFFDFDF"/>
+
+    </Grid>
+</Window>

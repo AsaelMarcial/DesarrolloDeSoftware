@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="GeneroCRUD" Height="450" Width="800">
-    <Grid>
-        
+        Title="GeneroCRUD" Height="429" Width="549">
+    <Grid HorizontalAlignment="Left" Width="550" Margin="0,0,0,-6">
+        <DataGrid x:Name="dgGeneros" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,16,176,19" Background="WhiteSmoke"/>
+        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB8EABB" Click="btnAñadir_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="400,79,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFFFDDB3"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="400,125,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="400,362,0,0" VerticalAlignment="Top" Height="29" Width="122" Background="#FFE6E6E6"/>
     </Grid>
 </Window>

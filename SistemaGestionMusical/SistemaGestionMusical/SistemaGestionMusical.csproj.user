@@ -19,10 +19,19 @@
     <Compile Update="vistas\CategoriaCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="vistas\GeneroAñadir.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="vistas\GeneroCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="vistas\PlaylistCrear.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="vistas\PlaylistCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\PlaylistVer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -39,13 +48,22 @@
     <Page Update="vistas\CategoriaCRUD.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="vistas\GeneroAñadir.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="vistas\GeneroCRUD.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="vistas\Inicio.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="vistas\PlaylistCrear.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="vistas\PlaylistCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\PlaylistVer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
