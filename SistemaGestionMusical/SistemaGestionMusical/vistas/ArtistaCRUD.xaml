@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="ArtistaCRUD" Height="450" Width="800">
+        Title="ArtistaCrud" Height="450" Width="800">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Margin="25,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="21"/>
+        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="508,64,0,0" VerticalAlignment="Top" Height="37" Width="170"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="508,180,0,0" VerticalAlignment="Top" Height="37" Width="170"/>
+        <Button Content="Modificar" HorizontalAlignment="Left" Margin="508,124,0,0" VerticalAlignment="Top" Height="37" Width="170"/>
+        <Button Content="Regresar" HorizontalAlignment="Left" Margin="737,381,0,0" VerticalAlignment="Top" Height="43" Width="53"/>
+        <DataGrid Margin="25,65,417,32"/>
+
     </Grid>
 </Window>
