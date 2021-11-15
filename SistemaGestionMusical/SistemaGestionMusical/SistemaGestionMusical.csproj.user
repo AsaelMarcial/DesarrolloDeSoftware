@@ -10,10 +10,19 @@
     <Compile Update="vistas\AlbumCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="vistas\AlbumRegistro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="vistas\ArtistaCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="vistas\ArtistaRegistro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="vistas\CancionCRUD.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vistas\CancionRegistro.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="vistas\CategoriaCRUD.xaml.cs">
@@ -39,10 +48,19 @@
     <Page Update="vistas\AlbumCRUD.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="vistas\AlbumRegistro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="vistas\ArtistaCRUD.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="vistas\ArtistaRegistro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="vistas\CancionCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\CancionRegistro.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="vistas\CategoriaCRUD.xaml">

@@ -1,0 +1,30 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.CancionRegistro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="CancionRegistro" Height="450" Width="800">
+    <Grid>
+        <Label Content="Radio" HorizontalAlignment="Left" Margin="31,37,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
+        <Label Content="Duracion" HorizontalAlignment="Left" Margin="31,127,0,0" VerticalAlignment="Top" Height="27" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
+        <Label Content="Titulo" HorizontalAlignment="Left" Margin="31,224,0,0" VerticalAlignment="Top" Height="27" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
+        <Label Content="Artista" HorizontalAlignment="Left" Margin="300,37,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="27"/>
+        <Label Content="Prioridad" HorizontalAlignment="Left" Margin="300,127,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Activa" HorizontalAlignment="Left" Margin="300,223,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="538,36,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox HorizontalAlignment="Left" Margin="538,67,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Categoria" HorizontalAlignment="Left" Margin="538,126,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox HorizontalAlignment="Left" Margin="538,157,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Button Content="Registrar" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Height="37" Width="112" Background="#FF2EC500"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="10,388,0,0" VerticalAlignment="Top" Height="36" Width="57" Background="#FFFF441A" Foreground="White"/>
+
+    </Grid>
+</Window>
