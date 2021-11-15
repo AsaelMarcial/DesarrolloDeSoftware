@@ -22,6 +22,9 @@
     <Compile Update="vistas\CancionCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="vistas\CancionRegistro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="vistas\CategoriaCRUD.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="vistas\CancionCRUD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vistas\CancionRegistro.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="vistas\CategoriaCRUD.xaml">
