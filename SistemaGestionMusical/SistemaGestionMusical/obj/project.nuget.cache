@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H4jgR2oM9lenVoOTXn0C51bBlWi8cmBWwQ7hzuJ4V/vMKQH3w+MhLDIyyIRLg6j2d1INAJlpyOlaeAL6ak6ISg==",
+  "dgSpecHash": "ii4CwA2oI24Eg9zW3ltqa8Dv8ZHbBzVsdkIZcW+tAPd7nBBXSyzEnYQDSBtwB0t6d6CWjL7+ZJKv4T0yAYQSqA==",
   "success": true,
-  "projectFilePath": "D:\\Users\\Dltunas\\Desktop\\Proyecto desarrollo de software\\DesarrolloDeSoftware\\SistemaGestionMusical\\SistemaGestionMusical\\SistemaGestionMusical.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\israz\\OneDrive\\Escritorio\\Proyecto Desarrollo de Software\\DesarrolloDeSoftware\\SistemaGestionMusical\\SistemaGestionMusical\\SistemaGestionMusical.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\israz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
   "logs": []
 }

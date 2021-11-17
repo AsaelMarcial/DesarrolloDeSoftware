@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\App.xaml
 14-1640303085
 
-19-1405111611
+21-305697131
 192-1533232326
 vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;
 
-False
+True
 

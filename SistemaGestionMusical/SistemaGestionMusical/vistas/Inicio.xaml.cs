@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaGestionMusical.vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,5 +26,40 @@ namespace SistemaGestionMusical
             InitializeComponent();
         }
 
+        private void btnCanciones_Click(object sender, RoutedEventArgs e)
+        {
+            CancionCRUD cancionCRUDVentana = new CancionCRUD();
+            cancionCRUDVentana.ShowDialog();
+        }
+
+        private void btnArtistas_Click(object sender, RoutedEventArgs e)
+        {
+            ArtistaCRUD artistaCRUDVentana = new ArtistaCRUD();
+            artistaCRUDVentana.ShowDialog();
+        }
+
+        private void btnAlbumes_Click(object sender, RoutedEventArgs e)
+        {
+            AlbumCRUD albumCRUDVentana = new AlbumCRUD();
+            albumCRUDVentana.ShowDialog();
+        }
+
+        private void btnCategorias_Click(object sender, RoutedEventArgs e)
+        {
+            CategoriaCRUD categoriaCRUDVentana = new CategoriaCRUD();
+            categoriaCRUDVentana.ShowDialog();
+        }
+
+        private void btnGeneros_Click(object sender, RoutedEventArgs e)
+        {
+            GeneroCRUD generoCRUDVentana = new GeneroCRUD();
+            generoCRUDVentana.ShowDialog();
+        }
+
+        private void btnVerPlaylists_Click(object sender, RoutedEventArgs e)
+        {
+            PlaylistCRUD playlistCRUDVentana = new PlaylistCRUD();
+            playlistCRUDVentana.ShowDialog();
+        }
     }
 }

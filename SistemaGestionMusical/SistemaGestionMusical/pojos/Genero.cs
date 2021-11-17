@@ -4,12 +4,10 @@ using System.Text;
 
 namespace SistemaGestionMusical.pojos
 {
-    public class Categoria
+    internal class Genero
     {
-        public int id;
-        public String nombre;
-        public String descripcion;
+        private int id;
+        private String nombre;
+        private String nombreCorto;
     }
-
-
 }
