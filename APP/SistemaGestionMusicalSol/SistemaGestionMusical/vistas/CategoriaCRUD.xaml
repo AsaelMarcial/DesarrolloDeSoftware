@@ -1,0 +1,18 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.CategoriaCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="CategoriaCRUD" Height="361" Width="517">
+    <Grid HorizontalAlignment="Left" Width="512" Margin="0,0,0,-6">
+        <DataGrid x:Name="dgCategorias" Margin="10,16,130,15" Background="WhiteSmoke"/>
+        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="402,17,0,0" VerticalAlignment="Top" Height="24" Width="100" Background="#FFB8EABB"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="402,71,0,0" VerticalAlignment="Top" Height="24" Width="100" Background="#FFFFDDB3"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="402,109,0,0" VerticalAlignment="Top" Height="24" Width="100" Background="#FFFFA5A5"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="402,312,0,0" VerticalAlignment="Top" Height="24" Width="100" Background="#FFE6E6E6"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="548,344,0,0" VerticalAlignment="Top" Width="0"/>
+
+    </Grid>
+</Window>

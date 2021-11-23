@@ -1,0 +1,17 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.GeneroCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="GeneroCRUD" Height="331" Width="549">
+    <Grid HorizontalAlignment="Left" Width="550" Margin="0,0,0,-6">
+        <DataGrid x:Name="dgGeneros" Margin="10,16,176,23" Background="WhiteSmoke"/>
+        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="400,137,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB8EABB"/>
+        <Button x:Name="btnActualizar" Content="Editar" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB3C6FF"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="400,170,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="400,269,0,0" VerticalAlignment="Top" Height="29" Width="122" Background="#FFE6E6E6"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
+    </Grid>
+</Window>

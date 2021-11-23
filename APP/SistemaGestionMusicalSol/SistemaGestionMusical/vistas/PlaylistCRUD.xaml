@@ -1,0 +1,17 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.PlaylistCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="Todas las playlist" Height="350" Width="600">
+    <Grid>
+        <DataGrid Margin="10,10,10,56"/>
+        <Button Content="Crear nueva playlist" HorizontalAlignment="Left" Margin="167,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="347,286,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
+        <Button Content="Ver playlist" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="523,295,0,0" VerticalAlignment="Top" Width="56"/>
+
+    </Grid>
+</Window>

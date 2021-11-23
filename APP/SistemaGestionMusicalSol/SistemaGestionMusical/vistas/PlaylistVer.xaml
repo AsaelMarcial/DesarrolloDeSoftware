@@ -1,0 +1,21 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.PlaylistVer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="Ver playlist" Height="400" Width="416">
+    <Grid>
+        <TextBox x:Name="tbNombrePlaylist" HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" Text="NombreDeLaPlaylist" VerticalAlignment="Top" Width="269"/>
+        <DataGrid x:Name="dgCanciones" Margin="10,111,0,0" HorizontalAlignment="Left" Width="269" Height="222" VerticalAlignment="Top"/>
+        <Label Content="Canciones" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEliminar" Content="Editar" HorizontalAlignment="Left" Margin="342,18,0,0" VerticalAlignment="Top" Width="57" Background="#FFE2FDE3"/>
+        <Button x:Name="btnQuitarCancion" Content="Quitar canción" HorizontalAlignment="Left" Margin="175,87,0,0" VerticalAlignment="Top" Background="#FFCCCBF5" Width="104"/>
+        <Button x:Name="btnGuardarCambios" Content="Guardar cambios" HorizontalAlignment="Left" Margin="305,114,0,0" VerticalAlignment="Top" Width="94" Background="#FFE2FDE3"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="305,157,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFD6D6"/>
+        <Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="343,313,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="269"><Run Text="Descripcion"/><LineBreak/><Run Language="es-es" Text="-"/><LineBreak/><Run Language="es-es" Text="-"/></TextBlock>
+
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="Model.Album">
+        <MappingFragment StoreEntitySet="Album">
+          <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
+          <ScalarProperty Name="artista" ColumnName="artista" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Artistas">
+      <EntityTypeMapping TypeName="Model.Artista">
+        <MappingFragment StoreEntitySet="Artista">
+          <ScalarProperty Name="idArtista" ColumnName="idArtista" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cancions">
+      <EntityTypeMapping TypeName="Model.Cancion">
+        <MappingFragment StoreEntitySet="Cancion">
+          <ScalarProperty Name="idCancion" ColumnName="idCancion" />
+          <ScalarProperty Name="activa" ColumnName="activa" />
+          <ScalarProperty Name="artista_id" ColumnName="artista_id" />
+          <ScalarProperty Name="album_id" ColumnName="album_id" />
+          <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="genero_id" ColumnName="genero_id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="prioridad" ColumnName="prioridad" />
+          <ScalarProperty Name="radio" ColumnName="radio" />
+          <ScalarProperty Name="tiempo" ColumnName="tiempo" />
+          <ScalarProperty Name="tiempoIntro" ColumnName="tiempoIntro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="Model.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elementoes">
+      <EntityTypeMapping TypeName="Model.Elemento">
+        <MappingFragment StoreEntitySet="Elemento">
+          <ScalarProperty Name="idElemento" ColumnName="idElemento" />
+          <ScalarProperty Name="activo" ColumnName="activo" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="comentario" ColumnName="comentario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="radio" ColumnName="radio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generoes">
+      <EntityTypeMapping TypeName="Model.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="nombreCorto" ColumnName="nombreCorto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jingles">
+      <EntityTypeMapping TypeName="Model.Jingle">
+        <MappingFragment StoreEntitySet="Jingle">
+          <ScalarProperty Name="idJingle" ColumnName="idJingle" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="programa_id" ColumnName="programa_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patrons">
+      <EntityTypeMapping TypeName="Model.Patron">
+        <MappingFragment StoreEntitySet="Patron">
+          <ScalarProperty Name="idPatron" ColumnName="idPatron" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programas">
+      <EntityTypeMapping TypeName="Model.Programa">
+        <MappingFragment StoreEntitySet="Programa">
+          <ScalarProperty Name="idPrograma" ColumnName="idPrograma" />
+          <ScalarProperty Name="dia" ColumnName="dia" />
+          <ScalarProperty Name="horaFinal" ColumnName="horaFinal" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="patron_id" ColumnName="patron_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
