@@ -21,5 +21,19 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
         }
+
+        private void Agregar_Click(object sender, RoutedEventArgs e)
+        {
+            using(Entities db = new Entities())
+            {
+                Artista artObject = new Artista();
+                artObject.nombre = txtNombre.Text.ToString();
+                artObject.tipo = Int32.Parse(txtSexo.Text.ToString());
+                artObject.tipo = Int32.Parse(txtSexo.Text.ToString());
+                db.Artistas.Add(artObject);
+                db.SaveChanges();
+            }
+        }
+
     }
 }

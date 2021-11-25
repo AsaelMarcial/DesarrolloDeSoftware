@@ -21,5 +21,11 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            ArtistaRegistro registro = new ArtistaRegistro();
+            registro.ShowDialog();
+        }
     }
 }
