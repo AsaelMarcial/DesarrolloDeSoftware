@@ -53,7 +53,7 @@ namespace SistemaGestionMusical.vistas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SistemaGestionMusical;V1.0.0.0;component/vistas/artistacrud.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SistemaGestionMusical;component/vistas/artistacrud.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\vistas\ArtistaCRUD.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

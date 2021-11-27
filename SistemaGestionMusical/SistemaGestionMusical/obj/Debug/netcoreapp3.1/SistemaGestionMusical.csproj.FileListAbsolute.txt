@@ -30,3 +30,17 @@ C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeS
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\CategoriaCRUD.baml
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\GeneroCRUD.baml
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\PlaylistCRUD.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\AlbumRegistro.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\ArtistaRegistro.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\CancionRegistro.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\CategoriaAñadir.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\GeneroAñadir.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\PlaylistCrear.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\PlaylistVer.g.cs
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\AlbumRegistro.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\ArtistaRegistro.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\CancionRegistro.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\CategoriaAñadir.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\GeneroAñadir.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\PlaylistCrear.baml
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\vistas\PlaylistVer.baml

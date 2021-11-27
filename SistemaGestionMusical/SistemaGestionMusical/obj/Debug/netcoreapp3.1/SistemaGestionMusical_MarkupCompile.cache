@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Users\Dltunas\Desktop\Proyecto desarrollo de software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\obj\Debug\netcoreapp3.1\
 SistemaGestionMusical
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Users\Dltunas\Desktop\Proyecto desarrollo de software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\App.xaml
-10-1841321173
+C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\SistemaGestionMusical\SistemaGestionMusical\App.xaml
+14-1640303085
 
-12-1249342266
-192-802667933
-vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCRUD.xaml;
+19880345431
+192-1533232326
+vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;
 
-True
+False
 
