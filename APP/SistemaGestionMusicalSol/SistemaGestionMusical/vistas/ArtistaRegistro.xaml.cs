@@ -27,6 +27,8 @@ namespace SistemaGestionMusical.vistas
             using(Entities db = new Entities())
             {
                 Artista artObject = new Artista();
+
+                artObject.tipo = 1;
                 artObject.nombre = txtNombre.Text.ToString();
                 artObject.sexo = Int32.Parse(txtSexo.Text.ToString());
                 db.Artistas.Add(artObject);

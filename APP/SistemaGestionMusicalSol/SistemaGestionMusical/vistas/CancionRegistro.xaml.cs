@@ -20,6 +20,17 @@ namespace SistemaGestionMusical.vistas
         public CancionRegistro()
         {
             InitializeComponent();
+            CargarCombobox();
+            
+        }
+
+        private void CargarCombobox()
+        {
+            CargarArtistas();
+            CargarPrioridades();
+            CargarGeneros();
+            CargarCategorias();
+            CargarAlbumes();
         }
 
         private void CargarArtistas()
@@ -88,8 +99,9 @@ namespace SistemaGestionMusical.vistas
             Artista artista = new Artista();
             artista = (Artista)cbArtista.SelectedItem;
 
-            String prioridadString = cbPrioridad.SelectedItem.ToString();
+            String prioridadString = (String)cbPrioridad.SelectedItem;
             int prioridad;
+
             switch (prioridadString)
             {
                 case "Baja":
@@ -140,7 +152,7 @@ namespace SistemaGestionMusical.vistas
                 }
             }catch (Exception ex)
             {
-                Console.WriteLine("Error en la subida de datos de Cancion con Entity Framework");
+                Console.WriteLine("Error en la subida de datos de Cancion con Entity Framework:\n\n"+ex.Message);
                 MessageBox.Show("Ha ocurrido un error, intente más tarde: código EFI01");
             }
             finally
