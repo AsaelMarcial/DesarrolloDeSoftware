@@ -5,14 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="CancionCRUD" Height="450" Width="800">
+        Title="Administración de canciones" Height="381" Width="672.5">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="25,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="21"/>
-        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="603,66,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FF2EC500"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="603,182,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FFFF441A"/>
-        <Button Content="Modificar" HorizontalAlignment="Left" Margin="603,126,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FFFFFF37"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Margin="737,381,0,0" VerticalAlignment="Top" Height="43" Width="53" Background="#FFFF441A" FontWeight="Bold" Foreground="White"/>
-        <DataGrid Margin="25,65,228,32"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="239*"/>
+
+        </Grid.RowDefinitions>
+        <TextBox x:Name="tbBuscar" HorizontalAlignment="Left" Margin="129,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="21"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="519,66,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" Margin="519,148,0,0" Background="#FFFFA5A5" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" Margin="519,116,0,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" HorizontalAlignment="Left" Width="122"/>
+        <DataGrid x:Name="dgCanciones" Margin="25,66,0,0" HorizontalAlignment="Left" Width="475" Height="269" VerticalAlignment="Top"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="555,314,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6"/>
+        <Label Content="Filtrar nombre" HorizontalAlignment="Left" Margin="39,21,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
 
     </Grid>
 </Window>

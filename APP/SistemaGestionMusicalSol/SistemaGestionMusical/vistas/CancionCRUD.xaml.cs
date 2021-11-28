@@ -17,14 +17,30 @@ namespace SistemaGestionMusical.vistas
     /// </summary>
     public partial class CancionCRUD : Window
     {
+        List<Cancion> canciones = new List<Cancion>();
+
         public CancionCRUD()
         {
             InitializeComponent();
+            CargarCanciones();
         }
 
-        private void btnAñadir_Click(object sender, RoutedEventArgs e)
+        private void CargarCanciones()
         {
+            using (Entities db = new Entities())
+            {
+                var listcanciones = db.Cancions;
+                foreach(var oCancions in listcanciones){
+                    canciones.Add(oCancions);
+                }
+            }
+            dgCanciones.ItemsSource = canciones;
+        }
 
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            CancionRegistro cancionRegistroVentana = new CancionRegistro();
+            cancionRegistroVentana.ShowDialog();
         }
     }
 }

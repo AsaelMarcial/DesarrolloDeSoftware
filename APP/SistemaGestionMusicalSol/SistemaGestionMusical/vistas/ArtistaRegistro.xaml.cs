@@ -28,8 +28,7 @@ namespace SistemaGestionMusical.vistas
             {
                 Artista artObject = new Artista();
                 artObject.nombre = txtNombre.Text.ToString();
-                artObject.tipo = Int32.Parse(txtSexo.Text.ToString());
-                artObject.tipo = Int32.Parse(txtSexo.Text.ToString());
+                artObject.sexo = Int32.Parse(txtSexo.Text.ToString());
                 db.Artistas.Add(artObject);
                 db.SaveChanges();
             }

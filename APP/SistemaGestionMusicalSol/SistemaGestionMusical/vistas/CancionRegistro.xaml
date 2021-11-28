@@ -5,26 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="CancionRegistro" Height="450" Width="800">
+        Title="CancionRegistro" Height="312" Width="750">
     <Grid>
-        <Label Content="Radio" HorizontalAlignment="Left" Margin="31,37,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
-        <Label Content="Duracion" HorizontalAlignment="Left" Margin="31,127,0,0" VerticalAlignment="Top" Height="27" Width="61"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
-        <Label Content="Titulo" HorizontalAlignment="Left" Margin="31,224,0,0" VerticalAlignment="Top" Height="27" Width="61"/>
-        <TextBox HorizontalAlignment="Left" Margin="31,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
-        <Label Content="Artista" HorizontalAlignment="Left" Margin="300,37,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="27"/>
-        <Label Content="Prioridad" HorizontalAlignment="Left" Margin="300,127,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
-        <Label Content="Activa" HorizontalAlignment="Left" Margin="300,223,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
-        <ComboBox HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
-        <Label Content="Genero" HorizontalAlignment="Left" Margin="538,36,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
-        <ComboBox HorizontalAlignment="Left" Margin="538,67,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
-        <Label Content="Categoria" HorizontalAlignment="Left" Margin="538,126,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
-        <ComboBox HorizontalAlignment="Left" Margin="538,157,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
-        <Button Content="Registrar" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Height="37" Width="112" Background="#FF2EC500"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="270,322,0,0" VerticalAlignment="Top" Height="36" Width="57" Background="#FFFF441A" Foreground="White" RenderTransformOrigin="0.675,-1.117"/>
+        <Label Content="Título" HorizontalAlignment="Left" Margin="21,17,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
+        <TextBox x:Name="tbTitulo" HorizontalAlignment="Left" Margin="21,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="28"/>
+        <Label Content="Duracion" HorizontalAlignment="Left" Margin="21,72,0,0" VerticalAlignment="Top" Height="27" Width="61"/>
+        <TextBox x:Name="tbDuracion" HorizontalAlignment="Left" Margin="21,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="28"/>
+        <Label Content="Duración de la intro&#xD;&#xA;" HorizontalAlignment="Left" Margin="21,142,0,0" VerticalAlignment="Top" Height="27" Width="117"/>
+        <TextBox x:Name="tbDuracionIntro" HorizontalAlignment="Left" Margin="21,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
+        <Label Content="Artista" HorizontalAlignment="Left" Margin="530,73,0,0" VerticalAlignment="Top" Height="27" Width="46"/>
+        <Label Content="Prioridad" HorizontalAlignment="Left" Margin="528,142,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox x:Name="cbPrioridad" HorizontalAlignment="Left" Margin="530,167,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="276,72,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox x:Name="cbGenero" HorizontalAlignment="Left" Margin="276,97,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Categoria" HorizontalAlignment="Left" Margin="276,142,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <ComboBox x:Name="cbCategoria" HorizontalAlignment="Left" Margin="276,167,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top" Height="32" Width="112" Background="#FFB8EABB" Click="BtnRegistrar_Click"/>
+        <ComboBox x:Name="cbArtista" HorizontalAlignment="Left" Margin="530,97,0,0" VerticalAlignment="Top" Width="200" Height="28"/>
+        <CheckBox x:Name="chbActiva" Content="Canción activa" HorizontalAlignment="Left" Margin="21,226,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <ComboBox x:Name="cbAlbum" HorizontalAlignment="Left" Margin="530,39,0,0" VerticalAlignment="Top" Width="200" Height="29"/>
+        <Label Content="Album" HorizontalAlignment="Left" Margin="530,17,0,0" VerticalAlignment="Top" Height="27" Width="63"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="656,253,0,0" VerticalAlignment="Top" Height="22" Width="74" Background="#FFD8D8D8" Click="BtnCancelar_Click"/>
+        <TextBox x:Name="tbRadio" HorizontalAlignment="Left" Margin="276,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="27"/>
+        <Label Content="Radio&#xA;" HorizontalAlignment="Left" Margin="276,17,0,0" VerticalAlignment="Top" Height="27" Width="117"/>
 
     </Grid>
 </Window>

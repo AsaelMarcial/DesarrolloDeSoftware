@@ -9,9 +9,9 @@
     <Grid HorizontalAlignment="Left" Width="550" Margin="0,0,0,-6">
         <DataGrid x:Name="dgGeneros" Margin="10,16,176,23" Background="WhiteSmoke"/>
         <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="400,137,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB8EABB"/>
-        <Button x:Name="btnActualizar" Content="Editar" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB3C6FF"/>
+        <Button x:Name="btnActualizar" Content="Editar" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FF99B2FD"/>
         <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="400,170,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
-        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="400,269,0,0" VerticalAlignment="Top" Height="29" Width="122" Background="#FFE6E6E6"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="436,262,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
     </Grid>
 </Window>
