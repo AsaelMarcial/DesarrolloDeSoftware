@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="idAlbum" />
     </Key>
-    <Property Name="idAlbum" Type="Int32" Nullable="false" />
+    <Property Name="idAlbum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="artista" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Album" ToRole="Cancion" />
@@ -13,7 +13,7 @@
     <Key>
       <PropertyRef Name="idArtista" />
     </Key>
-    <Property Name="idArtista" Type="Int32" Nullable="false" />
+    <Property Name="idArtista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="sexo" Type="Int32" />
     <Property Name="tipo" Type="Int32" Nullable="false" />
@@ -23,7 +23,7 @@
     <Key>
       <PropertyRef Name="idCancion" />
     </Key>
-    <Property Name="idCancion" Type="Int32" Nullable="false" />
+    <Property Name="idCancion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="activa" Type="Boolean" Nullable="false" />
     <Property Name="artista_id" Type="Int32" Nullable="false" />
     <Property Name="album_id" Type="Int32" />
@@ -45,7 +45,7 @@
     <Key>
       <PropertyRef Name="idCategoria" />
     </Key>
-    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Categoria" ToRole="Cancion" />
     <NavigationProperty Name="Patrons" Relationship="Self.FK_Patron_ToCategoria" FromRole="Categoria" ToRole="Patron" />
@@ -54,7 +54,7 @@
     <Key>
       <PropertyRef Name="idElemento" />
     </Key>
-    <Property Name="idElemento" Type="Int32" Nullable="false" />
+    <Property Name="idElemento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="activo" Type="Boolean" Nullable="false" />
     <Property Name="clave" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="comentario" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
@@ -65,7 +65,7 @@
     <Key>
       <PropertyRef Name="idGenero" />
     </Key>
-    <Property Name="idGenero" Type="Int32" Nullable="false" />
+    <Property Name="idGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="nombreCorto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToGenero" FromRole="Genero" ToRole="Cancion" />
@@ -84,7 +84,7 @@
     <Key>
       <PropertyRef Name="idPatron" />
     </Key>
-    <Property Name="idPatron" Type="Int32" Nullable="false" />
+    <Property Name="idPatron" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="categoria" Type="Int32" Nullable="false" />
     <Property Name="genero" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Categoria1" Relationship="Self.FK_Patron_ToCategoria" FromRole="Patron" ToRole="Categoria" />
@@ -95,7 +95,7 @@
     <Key>
       <PropertyRef Name="idPrograma" />
     </Key>
-    <Property Name="idPrograma" Type="Int32" Nullable="false" />
+    <Property Name="idPrograma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="dia" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="horaFinal" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="horaInicio" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />

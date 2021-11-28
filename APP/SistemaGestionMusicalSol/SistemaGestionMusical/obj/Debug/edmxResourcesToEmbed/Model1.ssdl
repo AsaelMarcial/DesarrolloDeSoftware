@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="idAlbum" />
     </Key>
-    <Property Name="idAlbum" Type="int" Nullable="false" />
+    <Property Name="idAlbum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="artista" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -12,7 +12,7 @@
     <Key>
       <PropertyRef Name="idArtista" />
     </Key>
-    <Property Name="idArtista" Type="int" Nullable="false" />
+    <Property Name="idArtista" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="nchar" MaxLength="100" Nullable="false" />
     <Property Name="sexo" Type="int" />
     <Property Name="tipo" Type="int" Nullable="false" />
@@ -21,7 +21,7 @@
     <Key>
       <PropertyRef Name="idCancion" />
     </Key>
-    <Property Name="idCancion" Type="int" Nullable="false" />
+    <Property Name="idCancion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="activa" Type="bit" Nullable="false" />
     <Property Name="artista_id" Type="int" Nullable="false" />
     <Property Name="album_id" Type="int" />
@@ -39,14 +39,14 @@
     <Key>
       <PropertyRef Name="idCategoria" />
     </Key>
-    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="idCategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="descripcion" Type="nchar" MaxLength="60" Nullable="false" />
   </EntityType>
   <EntityType Name="Elemento">
     <Key>
       <PropertyRef Name="idElemento" />
     </Key>
-    <Property Name="idElemento" Type="int" Nullable="false" />
+    <Property Name="idElemento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="activo" Type="bit" Nullable="false" />
     <Property Name="clave" Type="nchar" MaxLength="20" Nullable="false" />
     <Property Name="comentario" Type="nchar" MaxLength="100" Nullable="false" />
@@ -57,7 +57,7 @@
     <Key>
       <PropertyRef Name="idGenero" />
     </Key>
-    <Property Name="idGenero" Type="int" Nullable="false" />
+    <Property Name="idGenero" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="nchar" MaxLength="100" Nullable="false" />
     <Property Name="nombreCorto" Type="nchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -73,7 +73,7 @@
     <Key>
       <PropertyRef Name="idPatron" />
     </Key>
-    <Property Name="idPatron" Type="int" Nullable="false" />
+    <Property Name="idPatron" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="categoria" Type="int" Nullable="false" />
     <Property Name="genero" Type="int" Nullable="false" />
   </EntityType>
@@ -81,7 +81,7 @@
     <Key>
       <PropertyRef Name="idPrograma" />
     </Key>
-    <Property Name="idPrograma" Type="int" Nullable="false" />
+    <Property Name="idPrograma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="dia" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="horaFinal" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="horaInicio" Type="nchar" MaxLength="50" Nullable="false" />
