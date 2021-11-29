@@ -58,13 +58,8 @@ namespace SistemaGestionMusical
 
         private void btnVerPlaylists_Click(object sender, RoutedEventArgs e)
         {
-            /*PlaylistCRUD playlistCRUDVentana = new PlaylistCRUD();
-            playlistCRUDVentana.ShowDialog();*/
-            using (Entities db = new Entities())
-            {
-                Console.WriteLine("Conectado a la base de datos: " + db.Database.Connection.Database);
-            }
-
+            PlaylistCRUD playlistCRUDVentana = new PlaylistCRUD();
+            playlistCRUDVentana.ShowDialog();
         }
     }
 }

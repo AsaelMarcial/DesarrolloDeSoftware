@@ -10,14 +10,12 @@
     <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Album" ToRole="Cancion" />
   </EntityType>
   <EntityType Name="Artista">
-    <Key>
-      <PropertyRef Name="idArtista" />
-    </Key>
     <Property Name="idArtista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="sexo" Type="Int32" />
     <Property Name="tipo" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToArtista" FromRole="Artista" ToRole="Cancion" />
+    <NavigationProperty Name="Cancions1" Relationship="Model.FK_Cancion_ToArtista1" FromRole="Artista" ToRole="Cancion" />
   </EntityType>
   <EntityType Name="Cancion">
     <Key>
@@ -40,6 +38,7 @@
     <NavigationProperty Name="Artista" Relationship="Self.FK_Cancion_ToArtista" FromRole="Cancion" ToRole="Artista" />
     <NavigationProperty Name="Categoria" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Cancion" ToRole="Categoria" />
     <NavigationProperty Name="Genero" Relationship="Self.FK_Cancion_ToGenero" FromRole="Cancion" ToRole="Genero" />
+    <NavigationProperty Name="Artista1" Relationship="Model.FK_Cancion_ToArtista1" FromRole="Cancion" ToRole="Artista" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -119,12 +118,8 @@
     <End Role="Artista" Type="Self.Artista" Multiplicity="1" />
     <End Role="Cancion" Type="Self.Cancion" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Artista">
-        <PropertyRef Name="idArtista" />
-      </Principal>
-      <Dependent Role="Cancion">
-        <PropertyRef Name="artista_id" />
-      </Dependent>
+      <Principal Role="Artista" />
+      <Dependent Role="Cancion" />
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Cancion_ToCategoria">
@@ -241,5 +236,21 @@
       <End Role="Patron" EntitySet="Patrons" />
       <End Role="Programa" EntitySet="Programas" />
     </AssociationSet>
+    <AssociationSet Name="FK_Cancion_ToArtista1" Association="Model.FK_Cancion_ToArtista1">
+      <End Role="Artista" EntitySet="Artistas" />
+      <End Role="Cancion" EntitySet="Cancions" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Cancion_ToArtista1">
+    <End Type="Model.Artista" Role="Artista" Multiplicity="1" />
+    <End Type="Model.Cancion" Role="Cancion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artista">
+        <PropertyRef Name="idArtista" />
+      </Principal>
+      <Dependent Role="Cancion">
+        <PropertyRef Name="artista_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

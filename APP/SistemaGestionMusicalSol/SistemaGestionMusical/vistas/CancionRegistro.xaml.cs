@@ -130,7 +130,7 @@ namespace SistemaGestionMusical.vistas
         {
             try
             {
-                using (Entities db = new Entities())
+                using (Database db = new Database())
                 {
                     Cancion canObject = new Cancion();
                     canObject.activa = activa;
@@ -146,7 +146,7 @@ namespace SistemaGestionMusical.vistas
                     canObject.tiempo = duracion;
                     canObject.tiempoIntro = duracionIntro;
 
-                    db.Cancions.Add(canObject);
+                    db.Cancion.Add(canObject);
                     db.SaveChanges();
                     MessageBox.Show("Registro exitoso");
                 }

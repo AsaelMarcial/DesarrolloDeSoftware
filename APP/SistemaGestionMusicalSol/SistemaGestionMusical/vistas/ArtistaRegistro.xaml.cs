@@ -24,14 +24,14 @@ namespace SistemaGestionMusical.vistas
 
         private void Agregar_Click(object sender, RoutedEventArgs e)
         {
-            using(Entities db = new Entities())
+            using(Database db = new Database())
             {
                 Artista artObject = new Artista();
 
                 artObject.tipo = 1;
                 artObject.nombre = txtNombre.Text.ToString();
                 artObject.sexo = Int32.Parse(txtSexo.Text.ToString());
-                db.Artistas.Add(artObject);
+                db.Artista.Add(artObject);
                 db.SaveChanges();
             }
         }

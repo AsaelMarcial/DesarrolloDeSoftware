@@ -27,9 +27,9 @@ namespace SistemaGestionMusical.vistas
 
         private void CargarCanciones()
         {
-            using (Entities db = new Entities())
+            using (Database db = new Database())
             {
-                var listcanciones = db.Cancions;
+                var listcanciones = db.Cancion;
                 foreach(var oCancions in listcanciones){
                     canciones.Add(oCancions);
                 }

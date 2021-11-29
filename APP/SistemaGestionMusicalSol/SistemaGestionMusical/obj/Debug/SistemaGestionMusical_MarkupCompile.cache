@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\APP\SistemaGestionMusicalSol\SistemaGestionMusical\obj\Debug\
+C:\Users\asael\Documents\DesarrolloDeSoftware\APP\SistemaGestionMusicalSol\SistemaGestionMusical\obj\Debug\
 SistemaGestionMusical
 none
 false
 DEBUG;TRACE
-C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\APP\SistemaGestionMusicalSol\SistemaGestionMusical\App.xaml
-15218398685
-2-1957146511
-31630606785
-181098332213
+C:\Users\asael\Documents\DesarrolloDeSoftware\APP\SistemaGestionMusicalSol\SistemaGestionMusical\App.xaml
+15-476991461
+2-1881755278
+31-1203506745
+18-280471348
 MainWindow.xaml;vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;
 
 False

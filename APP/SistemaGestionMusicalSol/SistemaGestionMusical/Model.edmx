@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Album">
           <Key>
             <PropertyRef Name="idAlbum" />
           </Key>
-          <Property Name="idAlbum" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idAlbum" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="artista" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -17,16 +17,16 @@
           <Key>
             <PropertyRef Name="idArtista" />
           </Key>
-          <Property Name="idArtista" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idArtista" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="nchar" MaxLength="100" Nullable="false" />
-          <Property Name="sexo" Type="int" />
+          <Property Name="sexo" Type="int" Nullable="false" />
           <Property Name="tipo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Cancion">
           <Key>
             <PropertyRef Name="idCancion" />
           </Key>
-          <Property Name="idCancion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idCancion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="activa" Type="bit" Nullable="false" />
           <Property Name="artista_id" Type="int" Nullable="false" />
           <Property Name="album_id" Type="int" />
@@ -44,14 +44,14 @@
           <Key>
             <PropertyRef Name="idCategoria" />
           </Key>
-          <Property Name="idCategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="nchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="Elemento">
           <Key>
             <PropertyRef Name="idElemento" />
           </Key>
-          <Property Name="idElemento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idElemento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="activo" Type="bit" Nullable="false" />
           <Property Name="clave" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="comentario" Type="nchar" MaxLength="100" Nullable="false" />
@@ -62,7 +62,7 @@
           <Key>
             <PropertyRef Name="idGenero" />
           </Key>
-          <Property Name="idGenero" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idGenero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="nombreCorto" Type="nchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -70,7 +70,7 @@
           <Key>
             <PropertyRef Name="idJingle" />
           </Key>
-          <Property Name="idJingle" Type="int" Nullable="false" />
+          <Property Name="idJingle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="descripcion" Type="nchar" MaxLength="100" Nullable="false" />
           <Property Name="programa_id" Type="int" Nullable="false" />
         </EntityType>
@@ -78,7 +78,7 @@
           <Key>
             <PropertyRef Name="idPatron" />
           </Key>
-          <Property Name="idPatron" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPatron" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="categoria" Type="int" Nullable="false" />
           <Property Name="genero" Type="int" Nullable="false" />
         </EntityType>
@@ -86,7 +86,7 @@
           <Key>
             <PropertyRef Name="idPrograma" />
           </Key>
-          <Property Name="idPrograma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idPrograma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="dia" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="horaFinal" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="horaInicio" Type="nchar" MaxLength="50" Nullable="false" />
@@ -231,7 +231,8 @@
             <End Role="Programa" EntitySet="Programa" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -242,17 +243,17 @@
           <Property Name="idAlbum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="artista" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Album" ToRole="Cancion" />
+          <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Album" ToRole="Cancion" />
         </EntityType>
         <EntityType Name="Artista">
           <Key>
             <PropertyRef Name="idArtista" />
           </Key>
-          <Property Name="idArtista" Type="Int32" Nullable="true" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idArtista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="sexo" Type="Int32" />
+          <Property Name="sexo" Type="Int32" Nullable="false" />
           <Property Name="tipo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToArtista" FromRole="Artista" ToRole="Cancion" />
+          <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToArtista" FromRole="Artista" ToRole="Cancion" />
         </EntityType>
         <EntityType Name="Cancion">
           <Key>
@@ -282,8 +283,8 @@
           </Key>
           <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Categoria" ToRole="Cancion" />
-          <NavigationProperty Name="Patrons" Relationship="Self.FK_Patron_ToCategoria" FromRole="Categoria" ToRole="Patron" />
+          <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Categoria" ToRole="Cancion" />
+          <NavigationProperty Name="Patron" Relationship="Self.FK_Patron_ToCategoria" FromRole="Categoria" ToRole="Patron" />
         </EntityType>
         <EntityType Name="Elemento">
           <Key>
@@ -303,14 +304,14 @@
           <Property Name="idGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="nombreCorto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Cancions" Relationship="Self.FK_Cancion_ToGenero" FromRole="Genero" ToRole="Cancion" />
-          <NavigationProperty Name="Patrons" Relationship="Self.FK_Patron_ToGenero" FromRole="Genero" ToRole="Patron" />
+          <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToGenero" FromRole="Genero" ToRole="Cancion" />
+          <NavigationProperty Name="Patron" Relationship="Self.FK_Patron_ToGenero" FromRole="Genero" ToRole="Patron" />
         </EntityType>
         <EntityType Name="Jingle">
           <Key>
             <PropertyRef Name="idJingle" />
           </Key>
-          <Property Name="idJingle" Type="Int32" Nullable="false" />
+          <Property Name="idJingle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="programa_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Programa" Relationship="Self.FK_Jingle_ToPrograma" FromRole="Jingle" ToRole="Programa" />
@@ -324,7 +325,7 @@
           <Property Name="genero" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Categoria1" Relationship="Self.FK_Patron_ToCategoria" FromRole="Patron" ToRole="Categoria" />
           <NavigationProperty Name="Genero1" Relationship="Self.FK_Patron_ToGenero" FromRole="Patron" ToRole="Genero" />
-          <NavigationProperty Name="Programas" Relationship="Self.FK_Programa_ToPatron" FromRole="Patron" ToRole="Programa" />
+          <NavigationProperty Name="Programa" Relationship="Self.FK_Programa_ToPatron" FromRole="Patron" ToRole="Programa" />
         </EntityType>
         <EntityType Name="Programa">
           <Key>
@@ -335,7 +336,7 @@
           <Property Name="horaFinal" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="horaInicio" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="patron_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Jingles" Relationship="Self.FK_Jingle_ToPrograma" FromRole="Programa" ToRole="Jingle" />
+          <NavigationProperty Name="Jingle" Relationship="Self.FK_Jingle_ToPrograma" FromRole="Programa" ToRole="Jingle" />
           <NavigationProperty Name="Patron" Relationship="Self.FK_Programa_ToPatron" FromRole="Programa" ToRole="Patron" />
         </EntityType>
         <Association Name="FK_Cancion_ToAlbum">
@@ -434,47 +435,47 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Albums" EntityType="Self.Album" />
-          <EntitySet Name="Artistas" EntityType="Self.Artista" />
-          <EntitySet Name="Cancions" EntityType="Self.Cancion" />
-          <EntitySet Name="Categorias" EntityType="Self.Categoria" />
-          <EntitySet Name="Elementoes" EntityType="Self.Elemento" />
-          <EntitySet Name="Generoes" EntityType="Self.Genero" />
-          <EntitySet Name="Jingles" EntityType="Self.Jingle" />
-          <EntitySet Name="Patrons" EntityType="Self.Patron" />
-          <EntitySet Name="Programas" EntityType="Self.Programa" />
+        <EntityContainer Name="Database" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Album" EntityType="Self.Album" />
+          <EntitySet Name="Artista" EntityType="Self.Artista" />
+          <EntitySet Name="Cancion" EntityType="Self.Cancion" />
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+          <EntitySet Name="Elemento" EntityType="Self.Elemento" />
+          <EntitySet Name="Genero" EntityType="Self.Genero" />
+          <EntitySet Name="Jingle" EntityType="Self.Jingle" />
+          <EntitySet Name="Patron" EntityType="Self.Patron" />
+          <EntitySet Name="Programa" EntityType="Self.Programa" />
           <AssociationSet Name="FK_Cancion_ToAlbum" Association="Self.FK_Cancion_ToAlbum">
-            <End Role="Album" EntitySet="Albums" />
-            <End Role="Cancion" EntitySet="Cancions" />
+            <End Role="Album" EntitySet="Album" />
+            <End Role="Cancion" EntitySet="Cancion" />
           </AssociationSet>
           <AssociationSet Name="FK_Cancion_ToArtista" Association="Self.FK_Cancion_ToArtista">
-            <End Role="Artista" EntitySet="Artistas" />
-            <End Role="Cancion" EntitySet="Cancions" />
+            <End Role="Artista" EntitySet="Artista" />
+            <End Role="Cancion" EntitySet="Cancion" />
           </AssociationSet>
           <AssociationSet Name="FK_Cancion_ToCategoria" Association="Self.FK_Cancion_ToCategoria">
-            <End Role="Categoria" EntitySet="Categorias" />
-            <End Role="Cancion" EntitySet="Cancions" />
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Cancion" EntitySet="Cancion" />
           </AssociationSet>
           <AssociationSet Name="FK_Cancion_ToGenero" Association="Self.FK_Cancion_ToGenero">
-            <End Role="Genero" EntitySet="Generoes" />
-            <End Role="Cancion" EntitySet="Cancions" />
+            <End Role="Genero" EntitySet="Genero" />
+            <End Role="Cancion" EntitySet="Cancion" />
           </AssociationSet>
           <AssociationSet Name="FK_Patron_ToCategoria" Association="Self.FK_Patron_ToCategoria">
-            <End Role="Categoria" EntitySet="Categorias" />
-            <End Role="Patron" EntitySet="Patrons" />
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Patron" EntitySet="Patron" />
           </AssociationSet>
           <AssociationSet Name="FK_Patron_ToGenero" Association="Self.FK_Patron_ToGenero">
-            <End Role="Genero" EntitySet="Generoes" />
-            <End Role="Patron" EntitySet="Patrons" />
+            <End Role="Genero" EntitySet="Genero" />
+            <End Role="Patron" EntitySet="Patron" />
           </AssociationSet>
           <AssociationSet Name="FK_Jingle_ToPrograma" Association="Self.FK_Jingle_ToPrograma">
-            <End Role="Programa" EntitySet="Programas" />
-            <End Role="Jingle" EntitySet="Jingles" />
+            <End Role="Programa" EntitySet="Programa" />
+            <End Role="Jingle" EntitySet="Jingle" />
           </AssociationSet>
           <AssociationSet Name="FK_Programa_ToPatron" Association="Self.FK_Programa_ToPatron">
-            <End Role="Patron" EntitySet="Patrons" />
-            <End Role="Programa" EntitySet="Programas" />
+            <End Role="Patron" EntitySet="Patron" />
+            <End Role="Programa" EntitySet="Programa" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -482,8 +483,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
-          <EntitySetMapping Name="Albums">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Database">
+          <EntitySetMapping Name="Album">
             <EntityTypeMapping TypeName="Model.Album">
               <MappingFragment StoreEntitySet="Album">
                 <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
@@ -492,7 +493,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Artistas">
+          <EntitySetMapping Name="Artista">
             <EntityTypeMapping TypeName="Model.Artista">
               <MappingFragment StoreEntitySet="Artista">
                 <ScalarProperty Name="idArtista" ColumnName="idArtista" />
@@ -502,7 +503,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Cancions">
+          <EntitySetMapping Name="Cancion">
             <EntityTypeMapping TypeName="Model.Cancion">
               <MappingFragment StoreEntitySet="Cancion">
                 <ScalarProperty Name="idCancion" ColumnName="idCancion" />
@@ -521,7 +522,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Categorias">
+          <EntitySetMapping Name="Categoria">
             <EntityTypeMapping TypeName="Model.Categoria">
               <MappingFragment StoreEntitySet="Categoria">
                 <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
@@ -529,7 +530,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Elementoes">
+          <EntitySetMapping Name="Elemento">
             <EntityTypeMapping TypeName="Model.Elemento">
               <MappingFragment StoreEntitySet="Elemento">
                 <ScalarProperty Name="idElemento" ColumnName="idElemento" />
@@ -541,7 +542,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Generoes">
+          <EntitySetMapping Name="Genero">
             <EntityTypeMapping TypeName="Model.Genero">
               <MappingFragment StoreEntitySet="Genero">
                 <ScalarProperty Name="idGenero" ColumnName="idGenero" />
@@ -550,7 +551,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Jingles">
+          <EntitySetMapping Name="Jingle">
             <EntityTypeMapping TypeName="Model.Jingle">
               <MappingFragment StoreEntitySet="Jingle">
                 <ScalarProperty Name="idJingle" ColumnName="idJingle" />
@@ -559,7 +560,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Patrons">
+          <EntitySetMapping Name="Patron">
             <EntityTypeMapping TypeName="Model.Patron">
               <MappingFragment StoreEntitySet="Patron">
                 <ScalarProperty Name="idPatron" ColumnName="idPatron" />
@@ -568,7 +569,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Programas">
+          <EntitySetMapping Name="Programa">
             <EntityTypeMapping TypeName="Model.Programa">
               <MappingFragment StoreEntitySet="Programa">
                 <ScalarProperty Name="idPrograma" ColumnName="idPrograma" />
@@ -593,7 +594,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
