@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="ArtistaRegistro" Height="450" Width="400">
+        Title="ArtistaRegistro" Height="296" Width="254">
     <Grid>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="33,42,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Margin="33,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32" x:Name="txtNombre"/>
-        <Label Content="Tipo" HorizontalAlignment="Left" Margin="33,165,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Margin="33,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32" x:Name="txtTipo"/>
-        <Label Content="Sexo" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Margin="33,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32"  x:Name="txtSexo"/>
-        <Button Content="Registrar" HorizontalAlignment="Center" Margin="0,288,0,0" VerticalAlignment="Top" Height="37" Width="112" Background="#FF2EC500" Click="Agregar_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="10,388,0,0" VerticalAlignment="Top" Height="36" Width="57" Background="#FFFF441A" Foreground="White"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="21,15,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Tipo" HorizontalAlignment="Left" Margin="26,118,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Sexo" HorizontalAlignment="Left" Margin="21,64,0,0" VerticalAlignment="Top" Width="77"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="35,241,0,0" VerticalAlignment="Top" Height="22" Width="76"  Background="#FF2EC500" Click="BtnRegistrar_Click"/>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="26,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="141,241,0,0" VerticalAlignment="Top" Height="22" Width="76"  Background="#FFDEDEDE" Click="BtnCancelar_Click"/>
+        <ComboBox x:Name="cbTipo" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top" Width="203"/>
+        <ComboBox x:Name="cbSexo" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="202"/>
 
     </Grid>
 </Window>

@@ -5,14 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="ArtistaCrud" Height="450" Width="800">
+        Title="Administración de artistas" Height="359" Width="576">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="25,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="21"/>
-        <DataGrid Margin="25,65,417,32"/>
-        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="515,71,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FF2EC500" Click="btnAgregar_Click"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="515,187,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FFFF441A"/>
-        <Button Content="Modificar" HorizontalAlignment="Left" Margin="515,131,0,0" VerticalAlignment="Top" Height="37" Width="170" Background="#FFFFFF37"/>
-        <Button Content="Regresar" HorizontalAlignment="Left" Margin="737,381,0,0" VerticalAlignment="Top" Height="43" Width="53" Background="#FFFF441A" FontWeight="Bold" Foreground="White"/>
+        <TextBox x:Name="tbFiltrar" HorizontalAlignment="Left" Margin="124,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="21"/>
+        <DataGrid x:Name="dgArtistas" Margin="25,65,0,0" HorizontalAlignment="Left" Width="386" RenderTransformOrigin="0.5,0.5" Height="261" VerticalAlignment="Top">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.29"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.995"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="430,64,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="430,143,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="430,111,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FF99B2FD"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="466,299,0,0" VerticalAlignment="Top" Height="23" Width="86" Background="#FFD0D0D0"/>
+        <Label Content="Filtrar por nombre" HorizontalAlignment="Left" Margin="17,26,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
