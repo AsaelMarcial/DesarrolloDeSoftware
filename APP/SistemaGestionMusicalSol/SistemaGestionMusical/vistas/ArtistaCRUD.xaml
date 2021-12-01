@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="Administración de artistas" Height="359" Width="576">
     <Grid>
-        <TextBox x:Name="tbFiltrar" HorizontalAlignment="Left" Margin="124,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="286" Height="21"/>
-        <DataGrid x:Name="dgArtistas" Margin="25,65,0,0" HorizontalAlignment="Left" Width="386" RenderTransformOrigin="0.5,0.5" Height="261" VerticalAlignment="Top" SelectionChanged="DgArtustas_SelectionChanged" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgArtistas" Margin="25,65,165,17" RenderTransformOrigin="0.5,0.5" SelectionChanged="DgArtustas_SelectionChanged" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="200" Header="Nombre del artista" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Width="80" Header="Sexo" Binding="{Binding Sexo}"/>
                 <DataGridTextColumn Width="98" Header="Tipo" Binding="{Binding Tipo}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="430,64,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="430,143,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5" Click="btnEliminar_Click"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="430,111,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FF99B2FD" Click="btnActualizar_Click"/>
-        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="466,299,0,0" VerticalAlignment="Top" Height="23" Width="86" Background="#FFD0D0D0" Click="btnRegresar_Click"/>
+        <Button x:Name="btnAgregar" Content="Agregar" Margin="430,64,24,0" VerticalAlignment="Top" Height="27" Background="#FFB8EABB" Click="btnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" Margin="430,143,24,0" VerticalAlignment="Top" Height="27" Background="#FFFFA5A5" Click="btnEliminar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" Margin="430,111,24,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" Click="btnActualizar_Click"/>
+        <Button x:Name="btnRegresar" Content="Regresar" Margin="466,299,24,21" Background="#FFD0D0D0" Click="btnRegresar_Click"/>
         <Label Content="Filtrar por nombre" HorizontalAlignment="Left" Margin="17,26,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbFiltrar" HorizontalAlignment="Left" Margin="129,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" TextChanged="TbFiltrar_TextChanged"/>
 
     </Grid>
 </Window>

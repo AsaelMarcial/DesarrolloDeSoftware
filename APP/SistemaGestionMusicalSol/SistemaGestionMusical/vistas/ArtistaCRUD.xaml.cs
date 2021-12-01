@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -142,7 +143,45 @@ namespace SistemaGestionMusical.vistas
             }
         }
 
-        
+        private void TbFiltrar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            String texto = tbFiltrar.Text;
+            if (texto == "")
+            {
+                CargarArtistas();
+            }
+            else
+            {
+                artistas.Clear();
+                dgArtistas.ItemsSource = null;
+
+                using (Database db = new Database())
+                {
+
+                    /*
+                     * var blogs = from b in context.Blogs
+                     * where b.Name.StartsWith("B")
+                     * select b;*
+                     */
+
+                    var listaArtistas = db.Artista.Where(d=>d.nombre.Contains(texto));
+                    List < ArtistaTuneado > artistasTuneados = new List<ArtistaTuneado>();
+                    foreach (var artista in listaArtistas)
+                    {
+                        ArtistaTuneado at = new ArtistaTuneado();
+                        at.IdArtista = artista.idArtista;
+                        at.Nombre = artista.nombre.Trim();
+                        at.Sexo = sexos[artista.sexo];
+                        at.Tipo = tipos[artista.tipo];
+                        artistasTuneados.Add(at);
+                    }
+                    dgArtistas.ItemsSource = artistasTuneados;
+                }
+                btnEliminar.IsEnabled = false;
+                btnActualizar.IsEnabled = false;
+            }
+        }
+
 
         private void DgArtustas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -153,11 +192,6 @@ namespace SistemaGestionMusical.vistas
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void TbFiltrar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

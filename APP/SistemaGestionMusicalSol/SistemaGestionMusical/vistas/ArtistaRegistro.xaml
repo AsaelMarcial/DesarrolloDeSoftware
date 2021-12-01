@@ -10,11 +10,11 @@
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="21,15,0,0" VerticalAlignment="Top" Width="77"/>
         <Label Content="Tipo" HorizontalAlignment="Left" Margin="26,118,0,0" VerticalAlignment="Top" Width="77"/>
         <Label Content="Sexo" HorizontalAlignment="Left" Margin="21,64,0,0" VerticalAlignment="Top" Width="77"/>
-        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="35,241,0,0" VerticalAlignment="Top" Height="22" Width="76"  Background="#FF2EC500" Click="BtnRegistrar_Click"/>
-        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="26,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="141,241,0,0" VerticalAlignment="Top" Height="22" Width="76"  Background="#FFDEDEDE" Click="BtnCancelar_Click"/>
-        <ComboBox x:Name="cbTipo" HorizontalAlignment="Center" Margin="0,144,0,0" VerticalAlignment="Top" Width="203"/>
-        <ComboBox x:Name="cbSexo" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="35,241,0,0" Width="76"  Background="#FF2EC500" Click="BtnRegistrar_Click" Height="22" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbNombre" Margin="26,41,27,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" Margin="141,241,37,0"  Background="#FFDEDEDE" Click="BtnCancelar_Click" Height="22" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbTipo" Margin="26,144,26,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbSexo" Margin="26,90,26,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
