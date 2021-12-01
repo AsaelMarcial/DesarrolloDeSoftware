@@ -7,11 +7,15 @@
         mc:Ignorable="d"
         Title="GeneroCRUD" Height="331" Width="549">
     <Grid HorizontalAlignment="Left" Width="550" Margin="0,0,0,-6">
-        <DataGrid x:Name="dgGeneros" Margin="10,16,176,23" Background="WhiteSmoke"/>
-        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="400,137,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB8EABB"/>
-        <Button x:Name="btnActualizar" Content="Editar" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FF99B2FD"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="400,170,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
-        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="436,262,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5"/>
+        <DataGrid x:Name="dgGeneros" Margin="10,16,176,23" Background="WhiteSmoke" SelectionChanged="DgGeneros_SelectionChanged" SelectionMode="Single" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="270" Header="Nombre del género" Binding="{Binding nombre}"/>
+                <DataGridTextColumn Width="86" Header="Nombre corto" Binding="{Binding nombreCorto}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="400,16,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FFB8EABB" Click="BtnAgregar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="400,71,0,0" VerticalAlignment="Top" Height="28" Width="122" Background="#FF99B2FD" Click="BtnActualizar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="400,114,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFFFA5A5" Click="BtnEliminar_Click"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="436,262,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6" Click="BtnRegresar_Click"/>
     </Grid>
 </Window>

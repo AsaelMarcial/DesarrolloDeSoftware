@@ -17,9 +17,93 @@ namespace SistemaGestionMusical.vistas
     /// </summary>
     public partial class GeneroCRUD : Window
     {
+        private List<Genero> generos = new List<Genero>();
+
         public GeneroCRUD()
         {
             InitializeComponent();
+            dgGeneros.IsReadOnly = true;
+            btnEliminar.IsEnabled = false;
+            btnActualizar.IsEnabled = false;
+
+            CargarGeneros();
+        }
+
+        private void CargarGeneros()
+        {
+            generos.Clear();
+            dgGeneros.ItemsSource = null;
+
+            using (Database db = new Database())
+            {
+                var listaGeneros = db.Genero;
+                foreach(var genero in listaGeneros)
+                {
+                    genero.nombre = genero.nombre.Trim();
+                    genero.nombreCorto = genero.nombreCorto.Trim();
+                    generos.Add(genero);
+                }
+                dgGeneros.ItemsSource = generos;
+            }
+            btnEliminar.IsEnabled = false;
+            btnActualizar.IsEnabled = false;
+        }
+
+        private void BtnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            GeneroAñadir ga = new GeneroAñadir();
+            ga.ShowDialog();
+            CargarGeneros();
+        }
+
+        private void BtnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            Genero genero = new Genero();
+            genero = (Genero)dgGeneros.SelectedItem;
+
+            GeneroAñadir ga = new GeneroAñadir();
+            ga.CargarGenero(genero);
+            ga.ShowDialog();
+            CargarGeneros();
+        }
+
+        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            Genero generoSeleccionado = new Genero();
+            generoSeleccionado = (Genero)dgGeneros.SelectedItem;
+
+            var result = MessageBox.Show( "¿Está seguro que desea eliminar el género seleccionado?", "Eliminar genero", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (result == MessageBoxResult.OK)
+            {
+                try
+                {
+                    using (Database db = new Database())
+                    {
+                        Genero genero = (Genero)db.Genero.Find(generoSeleccionado.idGenero);
+                        db.Genero.Remove(genero);
+                        db.SaveChanges();
+                        MessageBox.Show( "El genero se ha eliminado exitosamente del sistema", "Genero eliminado", MessageBoxButton.OK, MessageBoxImage.Information);
+                        CargarGeneros();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show( "No ha sido posible eliminar el género, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Console.WriteLine("Excepcion manejada al registrar artista en la base de datos:\n\n" + ex.Message);
+                }
+
+            }
+        }
+
+        private void DgGeneros_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            btnEliminar.IsEnabled = true;
+            btnActualizar.IsEnabled = true;
+        }
+
+        private void BtnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

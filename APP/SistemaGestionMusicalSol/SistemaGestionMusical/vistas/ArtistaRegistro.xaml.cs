@@ -75,13 +75,13 @@ namespace SistemaGestionMusical.vistas
 
                             db.Artista.Add(artObject);
                             db.SaveChanges();
-                            MessageBox.Show("Se ha registrado el artista en el sistema", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show( "Se ha registrado el artista en el sistema", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("No ha sido posible registrar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show( "No ha sido posible registrar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
                         Console.WriteLine("Excepcion manejada al registrar artista en la base de datos:\n\n" + ex.Message);
                     }
                 }
@@ -98,7 +98,7 @@ namespace SistemaGestionMusical.vistas
 
                             db.Entry(artObject).State = System.Data.Entity.EntityState.Modified;
                             db.SaveChanges();
-                            MessageBox.Show("Se ha actualizado el artista en el sistema", "Actualización exitosa", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show( "Se ha actualizado el artista en el sistema", "Actualización exitosa",  MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();
                         }
                     }
@@ -125,7 +125,7 @@ namespace SistemaGestionMusical.vistas
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("Está seguro que desea cancelar", "Cancelar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var result = MessageBox.Show("¿Está seguro que desea cancelar?", "Cancelar", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();

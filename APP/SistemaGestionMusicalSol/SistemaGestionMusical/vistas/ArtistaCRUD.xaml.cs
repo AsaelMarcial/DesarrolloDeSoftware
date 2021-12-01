@@ -117,7 +117,7 @@ namespace SistemaGestionMusical.vistas
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("¿Está seguro que desea eliminar al artista seleccionado?", "Eliminar artista", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            var result = MessageBox.Show( "¿Está seguro que desea eliminar al artista seleccionado?", "Eliminar artista", MessageBoxButton.OKCancel, MessageBoxImage.Question);
             if (result == MessageBoxResult.OK)
             {
                 try
@@ -129,14 +129,14 @@ namespace SistemaGestionMusical.vistas
                         Artista artista = (Artista)db.Artista.Find(at.IdArtista);
                         db.Artista.Remove(artista);
                         db.SaveChanges();
-                        MessageBox.Show("El artista se ha eliminado exitosamente del sistema", "Artista eliminado", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show( "El artista se ha eliminado exitosamente del sistema", "Artista eliminado", MessageBoxButton.OK, MessageBoxImage.Information);
                         CargarArtistas();
                         
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No ha sido posible registrar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show( "No ha sido posible eliminar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
                     Console.WriteLine("Excepcion manejada al registrar artista en la base de datos:\n\n" + ex.Message);
                 }
                 
