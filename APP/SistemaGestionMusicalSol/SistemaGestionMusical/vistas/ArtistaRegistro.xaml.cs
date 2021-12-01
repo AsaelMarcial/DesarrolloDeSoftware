@@ -18,33 +18,35 @@ namespace SistemaGestionMusical.vistas
     public partial class ArtistaRegistro : Window
     {
         private bool esNuevo = true;
+        int idArtistaEditable = -1;
+
+        private List<String> tipos = new List<String>{
+                "\tSeleccionar...", "Solista", "Grupo", "Dueto", "Trio", "Compositor", "DJ"
+            };
+        
+        private List<String> sexos = new List<String>{
+                "\tSeleccionar...", "Masculino", "Femenino", "Indefinido"
+            };
         public ArtistaRegistro()
         {
             InitializeComponent();
-            CargarCombobox();
-        }
-
-        private void CargarCombobox()
-        {
-            List<String> tipos = new List<String>
-            {
-                "\tSeleccionar...", "Solista", "Grupo", "Dueto", "Trio", "Compositor", "DJ"
-            };
             cbTipo.ItemsSource = tipos;
-            
-            List<String> sexos = new List<String>
-            {
-                "\tSeleccionar...", "Masculino", "Femenino", "Indefinido"
-            };
             cbSexo.ItemsSource = sexos;
-
             if (esNuevo)
             {
                 cbSexo.SelectedIndex = 0;
                 cbTipo.SelectedIndex = 0;
             }
-            
+        }
 
+        public void CargarArtista(Artista artista)
+        {
+            this.idArtistaEditable = artista.idArtista;
+            esNuevo = false;
+            btnRegistrar.Content = "Actualizar";
+            tbNombre.Text = artista.nombre;
+            cbSexo.SelectedValue = sexos[artista.sexo];
+            cbTipo.SelectedValue = tipos[artista.tipo];
         }
 
         private void BtnRegistrar_Click(object sender, RoutedEventArgs e)
@@ -55,63 +57,58 @@ namespace SistemaGestionMusical.vistas
 
             if (ValidarCampos(nombre, sexoStr, tipoStr))
             {
-                int sexo = -1;
-                int tipo = -1;
-
-                switch (sexoStr)
+                /* Ojo: se guarda el indice de la lista previamente
+                 * generada, del objeto que sea igual al string 
+                 * seleccionado en el combobox  */
+                int sexo = sexos.IndexOf(sexoStr);
+                int tipo = tipos.IndexOf(tipoStr);
+                if (esNuevo) // Registro
                 {
-                    case "Masculino":
-                        sexo = 0;
-                        break;
-                    case "Femenino":
-                        sexo = 1;
-                        break;
-                    case "Indefinido":
-                        sexo = 2;
-                        break;
-                }
-                switch (tipoStr)
-                {
-                    case "Solista":
-                        tipo = 0;
-                        break;
-                    case "Grupo":
-                        tipo = 1;
-                        break;
-                    case "Dueto":
-                        tipo = 2;
-                        break;
-                    case "Trio":
-                        tipo = 3;
-                        break;
-                    case "Compositor":
-                        tipo = 4;
-                        break;
-                    case "DJ":
-                        tipo = 5;
-                        break;
-                }
-
-                try
-                {
-                    using (Database db = new Database())
+                    try
                     {
-                        Artista artObject = new Artista();
-                        artObject.nombre = nombre;
-                        artObject.sexo = sexo;
-                        artObject.tipo = tipo;
+                        using (Database db = new Database())
+                        {
+                            Artista artObject = new Artista();
+                            artObject.nombre = nombre;
+                            artObject.sexo = sexo;
+                            artObject.tipo = tipo;
 
-                        db.Artista.Add(artObject);
-                        db.SaveChanges();
-                        MessageBox.Show("Se ha registrado el artista en el sistema", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
-                        this.Close();
+                            db.Artista.Add(artObject);
+                            db.SaveChanges();
+                            MessageBox.Show("Se ha registrado el artista en el sistema", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No ha sido posible registrar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Console.WriteLine("Excepcion manejada al registrar artista en la base de datos:\n\n" + ex.Message);
                     }
                 }
-                catch (Exception ex)
+                else //Actualización
                 {
-                    MessageBox.Show("No ha sido posible registrar el artista, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Console.WriteLine("Excepcion manejada al registrar artista en la base de datos:\n\n"+ex.Message);
+                    try
+                    {
+                        using (Database db = new Database())
+                        {
+                            Artista artObject = (Artista)db.Artista.Find(idArtistaEditable);
+                            artObject.nombre = nombre;
+                            artObject.sexo = sexo;
+                            artObject.tipo = tipo;
+
+                            db.Entry(artObject).State = System.Data.Entity.EntityState.Modified;
+                            db.SaveChanges();
+                            MessageBox.Show("Se ha actualizado el artista en el sistema", "Actualización exitosa", MessageBoxButton.OK, MessageBoxImage.Information);
+                            this.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No ha sido posible actualizar el artista, intente de nuevo más tarde\n"+ex.Message, "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Console.WriteLine("Excepcion manejada al actualizar artista en la base de datos:\n\n" + ex.Message);
+                    }
                 }
+                
                 
             }
         }
