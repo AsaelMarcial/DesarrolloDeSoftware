@@ -34,17 +34,26 @@ namespace SistemaGestionMusical.vistas
             generos.Clear();
             dgGeneros.ItemsSource = null;
 
-            using (Database db = new Database())
+            try
             {
-                var listaGeneros = db.Genero;
-                foreach(var genero in listaGeneros)
+                using (Database db = new Database())
                 {
-                    genero.nombre = genero.nombre.Trim();
-                    genero.nombreCorto = genero.nombreCorto.Trim();
-                    generos.Add(genero);
+                    var listaGeneros = db.Genero;
+                    foreach (var genero in listaGeneros)
+                    {
+                        genero.nombre = genero.nombre.Trim();
+                        genero.nombreCorto = genero.nombreCorto.Trim();
+                        generos.Add(genero);
+                    }
+                    dgGeneros.ItemsSource = generos;
                 }
-                dgGeneros.ItemsSource = generos;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No ha sido posible mostrar los géneros, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine("Excepcion manejada al cargar los géneros de la base de datos:\n\n" + ex.Message);
+            }
+            
             btnEliminar.IsEnabled = false;
             btnActualizar.IsEnabled = false;
         }
