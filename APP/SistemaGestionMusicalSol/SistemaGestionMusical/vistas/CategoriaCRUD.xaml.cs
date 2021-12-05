@@ -55,9 +55,13 @@ namespace SistemaGestionMusical.vistas
                 MessageBox.Show("No ha sido posible mostrar las categorías, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
                 Console.WriteLine("Excepcion manejada al cargar las categorías de la base de datos:\n\n" + ex.Message);
             }
+            finally
+            {
+                btnEliminar.IsEnabled = false;
+                btnActualizar.IsEnabled = false;
+            }
 
-            btnEliminar.IsEnabled = false;
-            btnActualizar.IsEnabled = false;
+            
         }
 
         private void BtnAñadir_Click(object sender, RoutedEventArgs e)

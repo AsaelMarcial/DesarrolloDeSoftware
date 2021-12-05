@@ -41,6 +41,11 @@ namespace SistemaGestionMusical.vistas
         public String Sexo { get => sexo; set => sexo = value; }
         public String Tipo { get => tipo; set => tipo = value; }
 
+        public override string ToString()
+        {
+            return Nombre;
+        }
+
     }
 
     public partial class ArtistaCRUD : Window

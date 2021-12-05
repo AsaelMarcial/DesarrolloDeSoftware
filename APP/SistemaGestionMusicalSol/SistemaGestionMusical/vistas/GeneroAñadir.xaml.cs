@@ -91,8 +91,8 @@ namespace SistemaGestionMusical.vistas
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("No ha sido posible registrar el género, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
-                        Console.WriteLine("Excepcion manejada al registrar género en la base de datos:\n\n" + ex.Message);
+                        MessageBox.Show("No ha sido posible actualizar el género, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Console.WriteLine("Excepcion manejada al actualizar género en la base de datos:\n\n" + ex.Message);
                     }
                 }
                 
@@ -103,7 +103,7 @@ namespace SistemaGestionMusical.vistas
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("Está seguro que desea cancelar", "Cancelar", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var result = MessageBox.Show("¿Está seguro que desea cancelar?", "Cancelar", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();

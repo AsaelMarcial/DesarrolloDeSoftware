@@ -11,13 +11,13 @@
             <RowDefinition Height="239*"/>
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbBuscar" HorizontalAlignment="Left" Margin="129,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="21"/>
+        <TextBox x:Name="tbBuscar" HorizontalAlignment="Left" Margin="143,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" Height="21"/>
         <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="519,66,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
         <Button x:Name="btnEliminar" Content="Eliminar" Margin="519,148,0,0" Background="#FFFFA5A5" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122"/>
         <Button x:Name="btnActualizar" Content="Actualizar" Margin="519,116,0,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" HorizontalAlignment="Left" Width="122"/>
         <DataGrid x:Name="dgCanciones" Margin="25,66,0,0" HorizontalAlignment="Left" Width="475" Height="269" VerticalAlignment="Top"/>
         <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="555,314,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6"/>
-        <Label Content="Filtrar nombre" HorizontalAlignment="Left" Margin="39,21,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
+        <Label Content="Filtrar por nombre:" HorizontalAlignment="Left" Margin="25,24,0,0" VerticalAlignment="Top" Height="26" Width="113"/>
 
     </Grid>
 </Window>

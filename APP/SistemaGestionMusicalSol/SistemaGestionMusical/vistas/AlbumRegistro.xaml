@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="AlbumRegistro" Height="450" Width="400">
+        Title="Añadir album" Height="244" Width="233">
     <Grid>
-        <Label Content="Artista" HorizontalAlignment="Left" Margin="33,42,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Margin="33,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Margin="33,159,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox HorizontalAlignment="Left" Margin="33,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" Height="32"/>
-        <Button Content="Registrar" HorizontalAlignment="Center" Margin="0,288,0,0" VerticalAlignment="Top" Height="37" Width="112" Background="#FF2EC500"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="10,388,0,0" VerticalAlignment="Top" Height="36" Width="57" Background="#FFFF441A" Foreground="White"/>
+        <Label Content="Artista" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="77"/>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="24,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Nombre del album:" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbArtistas" HorizontalAlignment="Left" Margin="24,85,0,0" VerticalAlignment="Top" Width="178"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="60,156,0,0" VerticalAlignment="Top" Width="106" Height="29" Background="#FFB8EABB" Click="BtnAgregar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="133,190,0,0" VerticalAlignment="Top" Width="80" Click="BtnCancelar_Click"/>
+        <Button x:Name="btnAgregarNuevoArtista" Content="Agregar nuevo artista" HorizontalAlignment="Left" Margin="131,67,0,0" VerticalAlignment="Top" Click="BtnAgregarNuevoArtista_Click" FontSize="7"/>
 
     </Grid>
 </Window>
