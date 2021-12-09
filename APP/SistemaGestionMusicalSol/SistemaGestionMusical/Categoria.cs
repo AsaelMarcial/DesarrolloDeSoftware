@@ -28,5 +28,10 @@ namespace SistemaGestionMusical
         public virtual ICollection<Cancion> Cancion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Patron> Patron { get; set; }
+
+        public override string ToString()
+        {
+            return descripcion;
+        }
     }
 }
