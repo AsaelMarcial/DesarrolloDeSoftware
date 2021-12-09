@@ -188,7 +188,7 @@ namespace SistemaGestionMusical.vistas
 
         private void BtnActualizar_Click(object sender, RoutedEventArgs e)
         {
-            Cancion cancion = (Cancion)dgCanciones.SelectedItem;
+            CancionTuneada cancion = (CancionTuneada)dgCanciones.SelectedItem;
             CancionRegistro cr = new CancionRegistro();
             cr.CargarCancion(cancion);
             cr.ShowDialog();

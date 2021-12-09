@@ -38,47 +38,32 @@ namespace SistemaGestionMusical.vistas
             cbPrioridad.SelectedIndex = 0;
         }
 
-        public void CargarCancion(Cancion cancion)
+        public void CargarCancion(CancionTuneada cancion)
         {
-            this.idCancionEditable = cancion.idCancion;
+            this.idCancionEditable = cancion.IdCancion;
             this.esNuevo = false;
             btnRegistrar.Content = "Actualizar";
+            cbPrioridad.SelectedItem = cancion.Prioridad;
 
-            switch (cancion.prioridad)
-            {
-                case 1:
-                    cbPrioridad.SelectedItem = "Alta";
-                    break;
-                case 2:
-                    cbPrioridad.SelectedItem = "Media";
-                    break;
-                case 3:
-                    cbPrioridad.SelectedItem = "Baja";
-                    break;
-                default:
-                    cbPrioridad.SelectedItem = "\tSeleccionar...";
-                    break;
-            }
-
-            Artista artistaEditable = artistas.Find(d => d.idArtista.Equals(cancion.artista_id));
+            Artista artistaEditable = artistas.Find(d => d.idArtista.Equals(cancion.IdArtista));
             cbArtista.SelectedItem = artistaEditable;
 
-            Album albumEditable = albumes.Find(d => d.idAlbum.Equals(cancion.album_id));
+            Album albumEditable = albumes.Find(d => d.idAlbum.Equals(cancion.IdAlbum));
             cbAlbum.SelectedItem = albumEditable;
 
-            Genero generoEditable = generos.Find(d => d.idGenero.Equals(cancion.genero_id));
+            Genero generoEditable = generos.Find(d => d.idGenero.Equals(cancion.IdGenero));
             cbGenero.SelectedItem = generoEditable;
 
-            Categoria categoriaEditable = categorias.Find(d => d.idCategoria.Equals(cancion.categoria_id));
+            Categoria categoriaEditable = categorias.Find(d => d.idCategoria.Equals(cancion.IdCategoria));
             cbCategoria.SelectedItem = categoriaEditable;
 
-            tbTitulo.Text = cancion.nombre.Trim();
-            tbDuracion.Text = cancion.tiempo.Trim();
-            tbDuracionIntro.Text = cancion.tiempoIntro.Trim();
-            tbRadio.Text = cancion.radio.Trim();
-            tbClave.Text = cancion.clave.Trim();
-            tbObservacion.Text = cancion.observacion.Trim();
-            chbActiva.IsChecked = cancion.activa;
+            tbTitulo.Text = cancion.Nombre;
+            tbDuracion.Text = cancion.Duracion;
+            tbDuracionIntro.Text = cancion.DuracionIntro;
+            tbRadio.Text = cancion.Radio;
+            tbClave.Text = cancion.Clave;
+            tbObservacion.Text = cancion.Observacion;
+            chbActiva.IsChecked = cancion.Activa;
 
         }
 
@@ -458,6 +443,8 @@ namespace SistemaGestionMusical.vistas
             albumes.Clear();
             Album rellenoAlb = new Album(); rellenoAlb.nombre = "\tSeleccionar..."; albumes.Add(rellenoAlb);
             CargarAlbum(artista.nombre);
+            int cantidadAlbumes = albumes.Count();
+            cbAlbum.SelectedIndex = cantidadAlbumes - 1;
         }
 
         private void BtnAñadirGenero_Click(object sender, RoutedEventArgs e)
@@ -465,6 +452,8 @@ namespace SistemaGestionMusical.vistas
             GeneroAñadir generoAñadir = new GeneroAñadir();
             generoAñadir.ShowDialog();
             CargarGeneros();
+            int cantidadGeneros = generos.Count;
+            cbGenero.SelectedIndex = cantidadGeneros - 1;
         }
 
         private void BtnAñadirCategoria_Click(object sender, RoutedEventArgs e)
@@ -472,6 +461,8 @@ namespace SistemaGestionMusical.vistas
             CategoriaAñadir categoriaAñadir = new CategoriaAñadir();
             categoriaAñadir.ShowDialog();
             CargarCategorias();
+            int cantidadCategorias = categorias.Count;
+            cbCategoria.SelectedIndex = cantidadCategorias - 1;
         }
     }
 }
