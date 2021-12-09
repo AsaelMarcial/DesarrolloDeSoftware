@@ -106,7 +106,7 @@ namespace SistemaGestionMusical.vistas
                 catch (Exception ex)
                 {
                     MessageBox.Show("No ha sido posible eliminar el álbum, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Console.WriteLine("Excepcion manejada al registrar álbum en la base de datos:\n\n" + ex.Message);
+                    Console.WriteLine("Excepcion manejada al eliminar álbum en la base de datos:\n\n" + ex.Message);
                 }
 
             }

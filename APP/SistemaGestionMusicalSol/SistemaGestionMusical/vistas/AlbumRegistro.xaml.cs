@@ -100,7 +100,7 @@ namespace SistemaGestionMusical.vistas
 
                             db.Album.Add(album);
                             db.SaveChanges();
-                            MessageBox.Show("Se ha registrado el album en el sistema", "Actualización exitosa", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("Se ha registrado el album en el sistema", "Registro exitoso", MessageBoxButton.OK, MessageBoxImage.Information);
                             this.Close();
                         }
                     }

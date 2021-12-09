@@ -5,8 +5,8 @@
       <PropertyRef Name="idAlbum" />
     </Key>
     <Property Name="idAlbum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="artista" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="artista" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Album" ToRole="Cancion" />
   </EntityType>
   <EntityType Name="Artista">
@@ -14,7 +14,7 @@
       <PropertyRef Name="idArtista" />
     </Key>
     <Property Name="idArtista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="sexo" Type="Int32" Nullable="false" />
     <Property Name="tipo" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToArtista" FromRole="Artista" ToRole="Cancion" />
@@ -30,12 +30,12 @@
     <Property Name="categoria_id" Type="Int32" Nullable="false" />
     <Property Name="clave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="genero_id" Type="Int32" Nullable="false" />
-    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="observacion" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="observacion" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
     <Property Name="prioridad" Type="Int32" Nullable="false" />
-    <Property Name="radio" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-    <Property Name="tiempo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="tiempoIntro" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="radio" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="tiempo" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="tiempoIntro" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Album" Relationship="Self.FK_Cancion_ToAlbum" FromRole="Cancion" ToRole="Album" />
     <NavigationProperty Name="Artista" Relationship="Self.FK_Cancion_ToArtista" FromRole="Cancion" ToRole="Artista" />
     <NavigationProperty Name="Categoria" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Cancion" ToRole="Categoria" />
@@ -46,7 +46,7 @@
       <PropertyRef Name="idCategoria" />
     </Key>
     <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="descripcion" Type="String" MaxLength="60" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Categoria" ToRole="Cancion" />
     <NavigationProperty Name="Patron" Relationship="Self.FK_Patron_ToCategoria" FromRole="Categoria" ToRole="Patron" />
   </EntityType>
@@ -66,7 +66,7 @@
       <PropertyRef Name="idGenero" />
     </Key>
     <Property Name="idGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="nombreCorto" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Cancion" Relationship="Self.FK_Cancion_ToGenero" FromRole="Genero" ToRole="Cancion" />
     <NavigationProperty Name="Patron" Relationship="Self.FK_Patron_ToGenero" FromRole="Genero" ToRole="Patron" />

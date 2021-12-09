@@ -5,19 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="Administración de canciones" Height="381" Width="672.5">
+        Title="Administración de canciones" Height="381" Width="830">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="239*"/>
 
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbBuscar" HorizontalAlignment="Left" Margin="143,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" Height="21"/>
-        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="519,66,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" Margin="519,148,0,0" Background="#FFFFA5A5" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" Margin="519,116,0,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" HorizontalAlignment="Left" Width="122"/>
-        <DataGrid x:Name="dgCanciones" Margin="25,66,0,0" HorizontalAlignment="Left" Width="475" Height="269" VerticalAlignment="Top"/>
-        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="555,314,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6"/>
-        <Label Content="Filtrar por nombre:" HorizontalAlignment="Left" Margin="25,24,0,0" VerticalAlignment="Top" Height="26" Width="113"/>
+        <TextBox x:Name="tbFiltro" HorizontalAlignment="Left" Margin="210,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Height="21"/>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="684,66,0,0" VerticalAlignment="Top" Height="27" Width="122" Background="#FFB8EABB" Click="btnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" Margin="684,148,0,0" Background="#FFFFA5A5" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122" Click="BtnEliminar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" Margin="684,116,0,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" HorizontalAlignment="Left" Width="122" Click="BtnActualizar_Click"/>
+        <DataGrid x:Name="dgCanciones" Margin="25,66,0,0" HorizontalAlignment="Left" Width="643" Height="269" VerticalAlignment="Top" SelectionChanged="DgCanciones_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="70" Header="Está activa" Binding="{Binding Activa}"/>
+                <DataGridTextColumn Width="70" Header="Clave" Binding="{Binding Clave}"/>
+                <DataGridTextColumn Width="135" Header="Nombre de la canción" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Width="110" Header="Artista" Binding="{Binding NombreArtista}"/>
+                <DataGridTextColumn Width="110" Header="Álbum" Binding="{Binding NombreAlbum}"/>
+                <DataGridTextColumn Width="80" Header="Duración" Binding="{Binding Duracion}"/>
+                <DataGridTextColumn Width="80" Header="Intro" Binding="{Binding DuracionIntro}"/>
+                <DataGridTextColumn Width="110" Header="Género" Binding="{Binding NombreGenero}"/>
+                <DataGridTextColumn Width="110" Header="Categoría" Binding="{Binding NombreCategoria}"/>
+                <DataGridTextColumn Width="110" Header="Radio" Binding="{Binding Radio}"/>
+                <DataGridTextColumn Width="150" Header="Observación" Binding="{Binding Observacion}"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="720,314,0,0" VerticalAlignment="Top" Height="21" Width="86" Background="#FFE6E6E6" Click="BtnRegresar_Click"/>
+        <Label Content="Filtrar por&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,26,0,0" VerticalAlignment="Top" Height="26" Width="64"/>
+        <ComboBox x:Name="cbFiltro" HorizontalAlignment="Left" Margin="94,30,0,0" VerticalAlignment="Top" Width="111" SelectedIndex="0"/>
+        <Button x:Name="btnBuscar" HorizontalAlignment="Left" Margin="480,26,0,0" VerticalAlignment="Top" Width="28" Click="BtnBuscar_Click" Height="28" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/vistas/iconobuscar.png" Stretch="Fill" TileMode="None"/>
+            </Button.Background>
+
+        </Button>
 
     </Grid>
 </Window>
