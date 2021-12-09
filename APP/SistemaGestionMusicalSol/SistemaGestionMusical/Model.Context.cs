@@ -34,5 +34,7 @@ namespace SistemaGestionMusical
         public virtual DbSet<Jingle> Jingle { get; set; }
         public virtual DbSet<Patron> Patron { get; set; }
         public virtual DbSet<Programa> Programa { get; set; }
+        public virtual DbSet<CancionPlaylist> CancionPlaylist { get; set; }
+        public virtual DbSet<Playlist> Playlist { get; set; }
     }
 }

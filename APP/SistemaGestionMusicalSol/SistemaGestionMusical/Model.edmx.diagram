@@ -22,6 +22,10 @@
         <AssociationConnector Association="Model.FK_Patron_ToGenero" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Jingle_ToPrograma" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Programa_ToPatron" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.CancionPlaylist" Width="1.5" PointX="5.25" PointY="7" />
+        <EntityTypeShape EntityType="Model.Playlist" Width="1.5" PointX="3" PointY="8.125" />
+        <AssociationConnector Association="Model.FK_CancionPlaylist_Cancion" />
+        <AssociationConnector Association="Model.FK_CancionPlaylist_Playlist" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

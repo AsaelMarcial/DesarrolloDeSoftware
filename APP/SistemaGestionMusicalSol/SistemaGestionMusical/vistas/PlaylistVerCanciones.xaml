@@ -1,0 +1,26 @@
+﻿<Window x:Class="SistemaGestionMusical.vistas.PlaylistVerCanciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
+        mc:Ignorable="d"
+        Title="Seleccionar canción para añadir a playlist" Height="247" Width="547">
+    <Grid>
+        <DataGrid x:Name="dgCanciones" HorizontalAlignment="Center" Width="547" Height="211" VerticalAlignment="Center" SelectionChanged="DgCanciones_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="70" Header="Está activa" Binding="{Binding Activa}"/>
+                <DataGridTextColumn Width="70" Header="Clave" Binding="{Binding Clave}"/>
+                <DataGridTextColumn Width="135" Header="Nombre de la canción" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Width="110" Header="Artista" Binding="{Binding NombreArtista}"/>
+                <DataGridTextColumn Width="110" Header="Álbum" Binding="{Binding NombreAlbum}"/>
+                <DataGridTextColumn Width="80" Header="Duración" Binding="{Binding Duracion}"/>
+                <DataGridTextColumn Width="80" Header="Intro" Binding="{Binding DuracionIntro}"/>
+                <DataGridTextColumn Width="110" Header="Género" Binding="{Binding NombreGenero}"/>
+                <DataGridTextColumn Width="110" Header="Categoría" Binding="{Binding NombreCategoria}"/>
+                <DataGridTextColumn Width="110" Header="Radio" Binding="{Binding Radio}"/>
+                <DataGridTextColumn Width="150" Header="Observación" Binding="{Binding Observacion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

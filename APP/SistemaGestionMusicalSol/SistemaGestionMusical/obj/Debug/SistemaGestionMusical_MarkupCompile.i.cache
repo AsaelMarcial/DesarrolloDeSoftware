@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\israz\OneDrive\Escritorio\Proyecto Desarrollo de Software\DesarrolloDeSoftware\APP\SistemaGestionMusicalSol\SistemaGestionMusical\App.xaml
-15218398685
+16241409195
 22035508349
-32-1486069086
+36750526740
 181098332213
-MainWindow.xaml;vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;
+MainWindow.xaml;vistas\AlbumCRUD.xaml;vistas\AlbumRegistro.xaml;vistas\ArtistaCRUD.xaml;vistas\ArtistaRegistro.xaml;vistas\CancionCRUD.xaml;vistas\CancionRegistro.xaml;vistas\CategoriaAñadir.xaml;vistas\CategoriaCRUD.xaml;vistas\GeneroAñadir.xaml;vistas\GeneroCRUD.xaml;vistas\Inicio.xaml;vistas\PlaylistCrear.xaml;vistas\PlaylistCRUD.xaml;vistas\PlaylistVer.xaml;vistas\PlaylistVerCanciones.xaml;
 
 False
 

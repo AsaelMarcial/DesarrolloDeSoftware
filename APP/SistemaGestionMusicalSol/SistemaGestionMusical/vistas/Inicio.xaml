@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical"
         mc:Ignorable="d"
-        Title="Inicio" Height="397.552" Width="594">
+        Title="Inicio" Height="397.552" Width="726">
     <Grid>
         <Grid>
             <Grid Margin="10,10,0,0" Background="Gainsboro" RenderTransformOrigin="0.366,0.382" Height="340" VerticalAlignment="Top" HorizontalAlignment="Left" Width="202">

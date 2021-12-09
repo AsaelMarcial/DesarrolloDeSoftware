@@ -5,17 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="Ver playlist" Height="400" Width="416">
+        Title="Ver playlist" Height="421" Width="568">
     <Grid>
-        <TextBox x:Name="tbNombrePlaylist" HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" Text="NombreDeLaPlaylist" VerticalAlignment="Top" Width="269"/>
-        <DataGrid x:Name="dgCanciones" Margin="10,111,0,0" HorizontalAlignment="Left" Width="269" Height="222" VerticalAlignment="Top"/>
-        <Label Content="Canciones" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEliminar" Content="Editar" HorizontalAlignment="Left" Margin="342,18,0,0" VerticalAlignment="Top" Width="57" Background="#FFE2FDE3"/>
-        <Button x:Name="btnQuitarCancion" Content="Quitar canción" HorizontalAlignment="Left" Margin="175,87,0,0" VerticalAlignment="Top" Background="#FFCCCBF5" Width="104"/>
-        <Button x:Name="btnGuardarCambios" Content="Guardar cambios" HorizontalAlignment="Left" Margin="305,114,0,0" VerticalAlignment="Top" Width="94" Background="#FFE2FDE3"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="305,157,0,0" VerticalAlignment="Top" Width="94" Background="#FFFFD6D6"/>
-        <Button x:Name="btnCerrar" Content="Cerrar" HorizontalAlignment="Left" Margin="343,313,0,0" VerticalAlignment="Top" Width="57"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="269"><Run Text="Descripcion"/><LineBreak/><Run Language="es-es" Text="-"/><LineBreak/><Run Language="es-es" Text="-"/></TextBlock>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Left" Margin="200,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269"/>
+        <DataGrid x:Name="dgCanciones" HorizontalAlignment="Center" Width="548" Height="212" VerticalAlignment="Top" SelectionChanged="DgCanciones_SelectionChanged" Margin="0,120,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="70" Header="Está activa" Binding="{Binding Activa}"/>
+                <DataGridTextColumn Width="70" Header="Clave" Binding="{Binding Clave}"/>
+                <DataGridTextColumn Width="135" Header="Nombre de la canción" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Width="110" Header="Artista" Binding="{Binding NombreArtista}"/>
+                <DataGridTextColumn Width="110" Header="Álbum" Binding="{Binding NombreAlbum}"/>
+                <DataGridTextColumn Width="80" Header="Duración" Binding="{Binding Duracion}"/>
+                <DataGridTextColumn Width="80" Header="Intro" Binding="{Binding DuracionIntro}"/>
+                <DataGridTextColumn Width="110" Header="Género" Binding="{Binding NombreGenero}"/>
+                <DataGridTextColumn Width="110" Header="Categoría" Binding="{Binding NombreCategoria}"/>
+                <DataGridTextColumn Width="110" Header="Radio" Binding="{Binding Radio}"/>
+                <DataGridTextColumn Width="150" Header="Observación" Binding="{Binding Observacion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Canciones" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAgregarCancion" Content="Agregar canción" HorizontalAlignment="Left" Margin="343,95,0,0" VerticalAlignment="Top" Background="#FFB8EABB" Width="94" Click="BtAgregarCancion_Click"/>
+        <Button x:Name="btnQuitarCancion" Content="Quitar canción" HorizontalAlignment="Left" Margin="449,95,0,0" VerticalAlignment="Top" Width="95" Background="#FFFFA5A5" Click="BtnQuitarCancion_Click" IsEnabled="False"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="468,362,0,0" VerticalAlignment="Top" Width="57" Click="BtnCancelar_Click"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Center" Margin="0,351,0,0" VerticalAlignment="Top" Width="128" Height="31" Click="BtnRegistrar_Click" Background="#FFB8EABB"/>
+        <Label Content="Nombre de la playlist:" HorizontalAlignment="Left" Margin="72,16,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbDescripcion" HorizontalAlignment="Left" Margin="200,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269"/>
+        <Label Content="Descripción:" HorizontalAlignment="Left" Margin="121,49,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

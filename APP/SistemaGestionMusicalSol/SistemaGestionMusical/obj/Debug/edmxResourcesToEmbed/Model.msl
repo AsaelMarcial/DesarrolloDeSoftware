@@ -97,5 +97,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CancionPlaylist">
+      <EntityTypeMapping TypeName="Model.CancionPlaylist">
+        <MappingFragment StoreEntitySet="CancionPlaylist">
+          <ScalarProperty Name="idCancion" ColumnName="idCancion" />
+          <ScalarProperty Name="idPlaylist" ColumnName="idPlaylist" />
+          <ScalarProperty Name="idCancionPlaylist" ColumnName="idCancionPlaylist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Playlist">
+      <EntityTypeMapping TypeName="Model.Playlist">
+        <MappingFragment StoreEntitySet="Playlist">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idPlaylist" ColumnName="idPlaylist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

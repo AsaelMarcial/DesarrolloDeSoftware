@@ -40,6 +40,7 @@
     <NavigationProperty Name="Artista" Relationship="Self.FK_Cancion_ToArtista" FromRole="Cancion" ToRole="Artista" />
     <NavigationProperty Name="Categoria" Relationship="Self.FK_Cancion_ToCategoria" FromRole="Cancion" ToRole="Categoria" />
     <NavigationProperty Name="Genero" Relationship="Self.FK_Cancion_ToGenero" FromRole="Cancion" ToRole="Genero" />
+    <NavigationProperty Name="CancionPlaylist" Relationship="Model.FK_CancionPlaylist_Cancion" FromRole="Cancion" ToRole="CancionPlaylist" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -241,5 +242,58 @@
       <End Role="Patron" EntitySet="Patron" />
       <End Role="Programa" EntitySet="Programa" />
     </AssociationSet>
+    <EntitySet Name="CancionPlaylist" EntityType="Model.CancionPlaylist" />
+    <EntitySet Name="Playlist" EntityType="Model.Playlist" />
+    <AssociationSet Name="FK_CancionPlaylist_Cancion" Association="Model.FK_CancionPlaylist_Cancion">
+      <End Role="Cancion" EntitySet="Cancion" />
+      <End Role="CancionPlaylist" EntitySet="CancionPlaylist" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CancionPlaylist_Playlist" Association="Model.FK_CancionPlaylist_Playlist">
+      <End Role="Playlist" EntitySet="Playlist" />
+      <End Role="CancionPlaylist" EntitySet="CancionPlaylist" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="CancionPlaylist">
+    <Key>
+      <PropertyRef Name="idCancionPlaylist" />
+    </Key>
+    <Property Name="idCancionPlaylist" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPlaylist" Type="Int32" Nullable="false" />
+    <Property Name="idCancion" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cancion" Relationship="Model.FK_CancionPlaylist_Cancion" FromRole="CancionPlaylist" ToRole="Cancion" />
+    <NavigationProperty Name="Playlist" Relationship="Model.FK_CancionPlaylist_Playlist" FromRole="CancionPlaylist" ToRole="Playlist" />
+  </EntityType>
+  <EntityType Name="Playlist">
+    <Key>
+      <PropertyRef Name="idPlaylist" />
+    </Key>
+    <Property Name="idPlaylist" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CancionPlaylist" Relationship="Model.FK_CancionPlaylist_Playlist" FromRole="Playlist" ToRole="CancionPlaylist" />
+  </EntityType>
+  <Association Name="FK_CancionPlaylist_Cancion">
+    <End Type="Model.Cancion" Role="Cancion" Multiplicity="1" />
+    <End Type="Model.CancionPlaylist" Role="CancionPlaylist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cancion">
+        <PropertyRef Name="idCancion" />
+      </Principal>
+      <Dependent Role="CancionPlaylist">
+        <PropertyRef Name="idCancion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CancionPlaylist_Playlist">
+    <End Type="Model.Playlist" Role="Playlist" Multiplicity="1" />
+    <End Type="Model.CancionPlaylist" Role="CancionPlaylist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Playlist">
+        <PropertyRef Name="idPlaylist" />
+      </Principal>
+      <Dependent Role="CancionPlaylist">
+        <PropertyRef Name="idPlaylist" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -16,7 +16,7 @@ namespace SistemaGestionMusical.vistas
     /// <summary>
     /// Lógica de interacción para CancionCRUD.xaml
     /// </summary>
-    class CancionTuneada
+    public class CancionTuneada
     {
         private int idCancion;
         private String nombre;

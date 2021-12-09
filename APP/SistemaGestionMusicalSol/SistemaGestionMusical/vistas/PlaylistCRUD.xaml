@@ -5,13 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="Todas las playlist" Height="350" Width="600">
+        Title="Todas las playlist" Height="252" Width="459">
     <Grid>
-        <DataGrid Margin="10,10,10,56"/>
-        <Button Content="Crear nueva playlist" HorizontalAlignment="Left" Margin="167,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="347,286,0,0" VerticalAlignment="Top" Height="29" Width="60"/>
-        <Button Content="Ver playlist" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Height="29" Width="128"/>
-        <Button Content="Salir" HorizontalAlignment="Left" Margin="523,295,0,0" VerticalAlignment="Top" Width="56"/>
+        <DataGrid x:Name="dgPaylist" Margin="16,40,0,0" Height="138" VerticalAlignment="Top" HorizontalAlignment="Left" Width="424" Background="#FFC1F3F2" BorderBrush="Black" SelectionChanged="DgPlaylist_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="180" Header="Nombre de la playlist" Binding="{Binding nombre}"/>
+                <DataGridTextColumn Width="233" Header="Descripción" Binding="{Binding descripcion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+            <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Height="19" Width="100" Click="BtnAñadir_Click" Background="#FFB8EABB"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="384,10,0,0" VerticalAlignment="Top" Height="19" Width="56" Background="#FFFFA5A5" IsEnabled="False" Click="BtnEliminar_Click"/>
+        <Button x:Name="btnReproducir" Content="Reproducir" HorizontalAlignment="Center" Margin="0,192,0,0" VerticalAlignment="Top" Height="29" Width="156" Background="#FF7ED4D2" BorderBrush="#FFF9C0C0" Foreground="Black" IsEnabled="False" Click="BtnReproducir_Click"/>
+        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="384,201,0,0" VerticalAlignment="Top" Width="56" Foreground="Black" BorderBrush="#FFC3C3C3" Click="BtnRegresar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="243,10,0,0" VerticalAlignment="Top" Height="19" Width="102" Background="#FF99B2FD" IsEnabled="False" Click="BtnActualizar_Click"/>
 
     </Grid>
 </Window>
