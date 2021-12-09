@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical"
         mc:Ignorable="d"
-        Title="Inicio" Height="397.552" Width="726">
+        Title="Inicio" Height="378" Width="726">
     <Grid>
         <Grid>
             <Grid Margin="10,10,0,0" Background="Gainsboro" RenderTransformOrigin="0.366,0.382" Height="340" VerticalAlignment="Top" HorizontalAlignment="Left" Width="202">
@@ -16,7 +16,38 @@
                 <Button x:Name="btnGeneros" Content="Géneros" HorizontalAlignment="Center" Margin="0,279,0,0" VerticalAlignment="Top" Height="33" Width="152" Background="#FFD9FBCA" Click="btnGeneros_Click"/>
             </Grid>
             <Label Content="Registros" HorizontalAlignment="Left" Margin="74,24,0,0" VerticalAlignment="Top" FontSize="16"/>
-            <Button x:Name="btnVerPlaylists" Content="Ver playlists" HorizontalAlignment="Left" Margin="231,10,0,0" VerticalAlignment="Top" Height="24" Width="98" Click="btnVerPlaylists_Click"/>
+            <Button x:Name="btnVerPlaylists" Content="Ver playlists" HorizontalAlignment="Left" Margin="581,26,0,0" VerticalAlignment="Top" Height="24" Width="111" Click="btnVerPlaylists_Click" Foreground="White" BorderBrush="#FF0018A0" Background="#FFED6200"/>
+            <Label Content="Playlist reproduciéndose" HorizontalAlignment="Left" Margin="246,24,0,0" VerticalAlignment="Top" Width="317" FontSize="18" FontFamily="Microsoft JhengHei"/>
+            <Separator HorizontalAlignment="Left" Margin="246,108,0,0" VerticalAlignment="Top" Height="40" Width="446"/>
+            <Label x:Name="lblNombrePlaylist" Content="Seleccione &quot;Ver playlist&quot; para reproducir una playlist" HorizontalAlignment="Left" Margin="246,59,0,0" VerticalAlignment="Top" Width="414" Background="White" FontSize="15" Foreground="#FFED6200"/>
+            <Label x:Name="lblDescripcionPlaylist" Content="" HorizontalAlignment="Left" Margin="252,89,0,0" VerticalAlignment="Top" Width="312" FontSize="10"/>
+            <Button x:Name="btnSkip" Content="" HorizontalAlignment="Left" Margin="460,288,0,0" VerticalAlignment="Top" Height="42" Width="42" BorderBrush="White" Click="BtnSkip_Click" Foreground="White">
+                <Button.Background>
+                    <ImageBrush ImageSource="/vistas/SkipSong.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnBack" Content="" HorizontalAlignment="Left" Margin="346,288,0,0" VerticalAlignment="Top" Height="42" Width="42" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Click="BtnBack_Click" Foreground="White">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-180.373"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/vistas/SkipSong.png"/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="lblCancionReproduciendose" Content="" HorizontalAlignment="Left" Margin="246,153,0,0" VerticalAlignment="Top" Width="317" FontSize="18" FontFamily="Microsoft JhengHei"/>
+            <Label x:Name="lblNombreCanción" Content="" HorizontalAlignment="Left" Margin="246,187,0,0" VerticalAlignment="Top" Width="428" Foreground="#FF0010FF" FontSize="15" Background="White"/>
+            <Label x:Name="lblArtista" Content="" HorizontalAlignment="Left" Margin="246,218,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lblNombreArtista" Content="" HorizontalAlignment="Left" Margin="298,218,0,0" VerticalAlignment="Top" Width="146"/>
+            <Label x:Name="lblAlbum" Content="" HorizontalAlignment="Left" Margin="458,218,0,0" VerticalAlignment="Top" Width="47"/>
+            <Label x:Name="lblNombreAlbum" Content="" HorizontalAlignment="Left" Margin="504,218,0,0" VerticalAlignment="Top" Width="222"/>
+            <Label x:Name="lblConteo" Content=" " HorizontalAlignment="Left" Margin="401,296,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <Label x:Name="lblObservacion" Content="" HorizontalAlignment="Left" Margin="252,249,0,0" VerticalAlignment="Top" Width="202" FontSize="10"/>
+            <Label x:Name="lblDuracion" Content="" HorizontalAlignment="Left" Margin="581,296,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
     </Grid>
 </Window>

@@ -86,6 +86,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="interfaces\ObservadorRespuesta.cs" />
+    <Compile Include="interfaces\ObservadorReproduccion.cs" />
     <Compile Include="Jingle.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -279,6 +280,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="vistas\SkipSong.png" />
     <Resource Include="vistas\iconobuscar.png" />
     <Resource Include="vistas\recursos\iconobuscar.png" />
   </ItemGroup>

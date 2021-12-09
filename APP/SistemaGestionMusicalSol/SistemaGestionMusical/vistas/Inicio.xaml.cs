@@ -1,4 +1,5 @@
-﻿using SistemaGestionMusical.vistas;
+﻿using SistemaGestionMusical.interfaces;
+using SistemaGestionMusical.vistas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,70 @@ namespace SistemaGestionMusical
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Inicio : Window
+    public partial class Inicio : Window, ObservadorReproduccion
     {
+        private List<CancionTuneada> cancionesTuneadas = new List<CancionTuneada>();
+        int maxListaCanciones = -1;
+        private int cancionReproduciendose = -1;
+
         public Inicio()
         {
             InitializeComponent();
+            btnSkip.IsEnabled = false;
+            btnBack.IsEnabled = false;
+        }
+
+        public void ObtenerPlaylist(Playlist playlist, List<CancionTuneada> canciones)
+        {
+            lblNombrePlaylist.Content = playlist.nombre;
+            lblDescripcionPlaylist.Content = playlist.descripcion;
+
+            this.cancionesTuneadas = canciones;
+            maxListaCanciones = canciones.Count();
+            cancionReproduciendose = 0;
+
+            lblAlbum.Content = "Album:";
+            lblArtista.Content = "Artista";
+            lblCancionReproduciendose.Content = "Cancion reproduciéndose";
+            ReproducirCancion();
+
+            btnSkip.IsEnabled = true;
+            btnBack.IsEnabled = true;
+        }
+
+        public void ReproducirCancion()
+        {
+            CancionTuneada cr = cancionesTuneadas[cancionReproduciendose];
+            lblNombreCanción.Content = cr.Nombre;
+            lblNombreArtista.Content = cr.NombreArtista;
+            lblNombreAlbum.Content = cr.NombreAlbum;
+            lblObservacion.Content = cr.Observacion;
+            lblDuracion.Content = cr.Duracion;
+            lblConteo.Content = cancionReproduciendose+1 + " / " + maxListaCanciones;
+        }
+
+        private void BtnSkip_Click(object sender, RoutedEventArgs e)
+        {
+            if (cancionReproduciendose < maxListaCanciones-1)
+            {
+                cancionReproduciendose++;
+                ReproducirCancion();
+            }
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if(cancionReproduciendose > 0)
+            {
+                cancionReproduciendose--;
+                ReproducirCancion();
+            }
+        }
+
+        private void btnVerPlaylists_Click(object sender, RoutedEventArgs e)
+        {
+            PlaylistCRUD playlistCRUDVentana = new PlaylistCRUD(this);
+            playlistCRUDVentana.ShowDialog();
         }
 
         private void btnCanciones_Click(object sender, RoutedEventArgs e)
@@ -56,10 +116,6 @@ namespace SistemaGestionMusical
             generoCRUDVentana.ShowDialog();
         }
 
-        private void btnVerPlaylists_Click(object sender, RoutedEventArgs e)
-        {
-            PlaylistCRUD playlistCRUDVentana = new PlaylistCRUD();
-            playlistCRUDVentana.ShowDialog();
-        }
+        
     }
 }
