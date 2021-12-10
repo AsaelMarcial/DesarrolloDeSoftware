@@ -29,9 +29,12 @@ namespace SistemaGestionMusical.vistas
             InitializeComponent();
             cbFiltrar.ItemsSource = filtro;
             cbFiltrar.SelectedIndex = 0;
-            dgAlbumes.IsReadOnly = true;
+            dgAlbumes.SelectionMode = DataGridSelectionMode.Single;
             dgAlbumes.AutoGenerateColumns = false;
+            dgAlbumes.IsReadOnly = true;
             dgAlbumes.CanUserAddRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
+
             btnActualizar.IsEnabled = false;
             btnEliminar.IsEnabled = false;
 

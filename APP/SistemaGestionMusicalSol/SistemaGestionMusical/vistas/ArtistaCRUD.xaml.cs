@@ -63,8 +63,11 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
             CargarArtistas();
+            dgArtistas.SelectionMode = DataGridSelectionMode.Single;
+            dgArtistas.AutoGenerateColumns = false;
+            dgArtistas.IsReadOnly = true;
             dgArtistas.CanUserAddRows = false;
-            dgArtistas.CanUserDeleteRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
             btnActualizar.IsEnabled = false;
             btnEliminar.IsEnabled = false;
 
@@ -74,24 +77,31 @@ namespace SistemaGestionMusical.vistas
         {
             artistas.Clear();
             dgArtistas.ItemsSource = null;
-
-            using (Database db = new Database())
+            try
             {
-                var listaArtistas = db.Artista;
-                List<ArtistaTuneado> artistasTuneados = new List<ArtistaTuneado>();
-                foreach (var artista in listaArtistas)
+                using (Database db = new Database())
                 {
-                    ArtistaTuneado at = new ArtistaTuneado();
-                    at.IdArtista = artista.idArtista;
-                    at.Nombre = artista.nombre.Trim();
-                    at.Sexo = sexos[artista.sexo];
-                    at.Tipo = tipos[artista.tipo];
-                    artistasTuneados.Add(at);
+                    var listaArtistas = db.Artista;
+                    List<ArtistaTuneado> artistasTuneados = new List<ArtistaTuneado>();
+                    foreach (var artista in listaArtistas)
+                    {
+                        ArtistaTuneado at = new ArtistaTuneado();
+                        at.IdArtista = artista.idArtista;
+                        at.Nombre = artista.nombre.Trim();
+                        at.Sexo = sexos[artista.sexo];
+                        at.Tipo = tipos[artista.tipo];
+                        artistasTuneados.Add(at);
+                    }
+                    dgArtistas.ItemsSource = artistasTuneados;
                 }
-                dgArtistas.ItemsSource = artistasTuneados;
+                btnEliminar.IsEnabled = false;
+                btnActualizar.IsEnabled = false;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("No ha sido posible actualizar los artistas, intente de nuevo más tarde", "Error del sistema", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine("Excepcion manejada al actualizar el artista en la base de datos:\n\n" + ex.Message);
             }
-            btnEliminar.IsEnabled = false;
-            btnActualizar.IsEnabled = false;
+            
         }
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)

@@ -27,6 +27,11 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
             CargarCanciones();
+            dgCanciones.SelectionMode = DataGridSelectionMode.Single;
+            dgCanciones.AutoGenerateColumns = false;
+            dgCanciones.IsReadOnly = true;
+            dgCanciones.CanUserAddRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
         }
 
         public PlaylistVerCanciones(ObservadorRespuesta respuestaCancion) : this()

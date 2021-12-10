@@ -22,10 +22,11 @@ namespace SistemaGestionMusical.vistas
         public CategoriaCRUD()
         {
             InitializeComponent();
-            dgCategorias.IsReadOnly = true;
+            dgCategorias.SelectionMode = DataGridSelectionMode.Single;
             dgCategorias.AutoGenerateColumns = false;
+            dgCategorias.IsReadOnly = true;
             dgCategorias.CanUserAddRows = false;
-            dgCategorias.CanUserDeleteRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
             btnEliminar.IsEnabled = false;
             btnActualizar.IsEnabled = false;
 

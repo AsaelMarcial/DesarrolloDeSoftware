@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
         Title="Administración de artistas" Height="359" Width="576">
-    <Grid>
-        <DataGrid x:Name="dgArtistas" Margin="25,65,165,17" RenderTransformOrigin="0.5,0.5" SelectionChanged="DgArtustas_SelectionChanged" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+    <Grid Margin="0,0,0,-16">
+        <DataGrid x:Name="dgArtistas" Margin="25,65,165,0" RenderTransformOrigin="0.5,0.5" SelectionChanged="DgArtustas_SelectionChanged" SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False" Height="255" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="200" Header="Nombre del artista" Binding="{Binding Nombre}"/>
                 <DataGridTextColumn Width="80" Header="Sexo" Binding="{Binding Sexo}"/>
@@ -17,7 +17,7 @@
         <Button x:Name="btnAgregar" Content="Agregar" Margin="430,64,24,0" VerticalAlignment="Top" Height="27" Background="#FFB8EABB" Click="btnAgregar_Click"/>
         <Button x:Name="btnEliminar" Content="Eliminar" Margin="430,143,24,0" VerticalAlignment="Top" Height="27" Background="#FFFFA5A5" Click="btnEliminar_Click"/>
         <Button x:Name="btnActualizar" Content="Actualizar" Margin="430,111,24,0" VerticalAlignment="Top" Height="27" Background="#FF99B2FD" Click="btnActualizar_Click"/>
-        <Button x:Name="btnRegresar" Content="Regresar" Margin="466,299,24,21" Background="#FFD0D0D0" Click="btnRegresar_Click"/>
+        <Button x:Name="btnRegresar" Content="Regresar" Margin="466,295,0,0" Background="#FFD0D0D0" Click="btnRegresar_Click" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86"/>
         <Label Content="Filtrar por nombre" HorizontalAlignment="Left" Margin="17,26,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbFiltrar" HorizontalAlignment="Left" Margin="129,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" TextChanged="TbFiltrar_TextChanged"/>
 

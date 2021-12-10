@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical.vistas"
         mc:Ignorable="d"
-        Title="Todas las playlist" Height="252" Width="459">
+        Title="Todas las playlist" Height="271" Width="459">
     <Grid>
         <DataGrid x:Name="dgPaylist" Margin="16,40,0,0" Height="138" VerticalAlignment="Top" HorizontalAlignment="Left" Width="424" Background="#FFC1F3F2" BorderBrush="Black" SelectionChanged="DgPlaylist_SelectionChanged">
             <DataGrid.Columns>

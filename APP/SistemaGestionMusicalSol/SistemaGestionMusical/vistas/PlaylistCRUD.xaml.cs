@@ -27,7 +27,11 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
             CargarPlaylists();
+            dgPaylist.SelectionMode = DataGridSelectionMode.Single;
+            dgPaylist.AutoGenerateColumns = false;
             dgPaylist.IsReadOnly = true;
+            dgPaylist.CanUserAddRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
         }
 
         public PlaylistCRUD(ObservadorReproduccion respuestaPlaylist) : this()

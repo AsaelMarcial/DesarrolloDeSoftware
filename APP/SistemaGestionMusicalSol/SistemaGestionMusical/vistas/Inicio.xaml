@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaGestionMusical"
         mc:Ignorable="d"
-        Title="Inicio" Height="378" Width="726">
+        Title="Inicio" Height="388" Width="726">
     <Grid>
         <Grid>
             <Grid Margin="10,10,0,0" Background="Gainsboro" RenderTransformOrigin="0.366,0.382" Height="340" VerticalAlignment="Top" HorizontalAlignment="Left" Width="202">
@@ -46,7 +46,7 @@
             <Label x:Name="lblAlbum" Content="" HorizontalAlignment="Left" Margin="458,218,0,0" VerticalAlignment="Top" Width="47"/>
             <Label x:Name="lblNombreAlbum" Content="" HorizontalAlignment="Left" Margin="504,218,0,0" VerticalAlignment="Top" Width="222"/>
             <Label x:Name="lblConteo" Content=" " HorizontalAlignment="Left" Margin="401,296,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <Label x:Name="lblObservacion" Content="" HorizontalAlignment="Left" Margin="252,249,0,0" VerticalAlignment="Top" Width="202" FontSize="10"/>
+            <Label x:Name="lblObservacion" Content="" HorizontalAlignment="Left" Margin="252,249,0,0" VerticalAlignment="Top" Width="389" FontSize="10"/>
             <Label x:Name="lblDuracion" Content="" HorizontalAlignment="Left" Margin="581,296,0,0" VerticalAlignment="Top" Width="120"/>
         </Grid>
     </Grid>

@@ -91,10 +91,16 @@ namespace SistemaGestionMusical.vistas
         {
             InitializeComponent();
             CargarCanciones();
-            cbFiltro.ItemsSource = filtros;
+            dgCanciones.SelectionMode = DataGridSelectionMode.Single;
+            dgCanciones.AutoGenerateColumns = false;
             dgCanciones.IsReadOnly = true;
             dgCanciones.CanUserAddRows = false;
-            dgCanciones.AutoGenerateColumns = false;
+            this.ResizeMode = ResizeMode.NoResize;
+
+            cbFiltro.ItemsSource = filtros;
+            
+            
+            
         }
 
         private void CargarCanciones()

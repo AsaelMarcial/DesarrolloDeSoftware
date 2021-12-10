@@ -22,7 +22,12 @@ namespace SistemaGestionMusical.vistas
         public GeneroCRUD()
         {
             InitializeComponent();
+            dgGeneros.SelectionMode = DataGridSelectionMode.Single;
+            dgGeneros.AutoGenerateColumns = false;
             dgGeneros.IsReadOnly = true;
+            dgGeneros.CanUserAddRows = false;
+            this.ResizeMode = ResizeMode.NoResize;
+
             btnEliminar.IsEnabled = false;
             btnActualizar.IsEnabled = false;
 
